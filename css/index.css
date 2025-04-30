@@ -10,6 +10,8 @@
 * {
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
     
 }
 
@@ -87,3 +89,56 @@
     background-color: var(--green-100);
     border: 1px solid var(--green-100);
 }
+
+
+.home {
+    display: flex;
+    position: relative;
+    left: 4%;
+}
+
+.title {
+    padding: 3rem;
+    font-family: var(--font-title);
+
+}
+
+.title h1 {
+    font-size: 4rem;
+    width: 50%;
+}
+
+.title p {
+    color: gray;
+    width: 50%;
+    font-size: 1.2rem;
+
+    margin-top: 0.9rem;
+}
+
+.title button {
+    background-color: black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: var(--font-button);
+    color: white;
+    border-radius: 18px;
+
+    padding: 0.7rem;
+    margin-top: 2rem;
+
+    width: 20%;
+
+    transition: all 0.4s ease;
+}
+
+.title button:hover {
+    background-color: var(--green-100);
+    border: 1px solid var(--green-100);
+
+    color: black;
+}
+
+/* .img-home {
+    width: 100%;
+} */
