@@ -6,9 +6,9 @@
 comandos para mysql server
 */
 
-CREATE DATABASE aquatech;
+CREATE DATABASE capitulo;
 
-USE aquatech;
+USE capitulo;
 
 CREATE TABLE empresa (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -65,3 +65,5 @@ insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar'
 insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
 
 select * from usuario;
+
+
