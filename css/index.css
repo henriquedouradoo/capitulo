@@ -93,24 +93,30 @@
 
 .home {
     display: flex;
-    position: relative;
-    left: 4%;
+    width: 100%;
 }
 
 .title {
     padding: 3rem;
     font-family: var(--font-title);
-
+    width: 50%;
+    position: relative;
+    left: 6%;
 }
 
 .title h1 {
-    font-size: 4rem;
-    width: 50%;
+    font-size: 4.5rem;
+    width: 100%;
+}
+
+.title span {
+    font-style: oblique;
+    text-decoration: underline gray;
 }
 
 .title p {
     color: gray;
-    width: 50%;
+    width: 100%;
     font-size: 1.2rem;
 
     margin-top: 0.9rem;
@@ -127,7 +133,7 @@
     padding: 0.7rem;
     margin-top: 2rem;
 
-    width: 20%;
+    width: 60%;
 
     transition: all 0.4s ease;
 }
@@ -139,6 +145,15 @@
     color: black;
 }
 
-/* .img-home {
-    width: 100%;
-} */
+.img-home {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.img-home img {
+    width: 25rem;
+    /* border: 12px solid rgba(0, 0, 0, 0.479); */
+    margin-top: 2.6rem;
+}
