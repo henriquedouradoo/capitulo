@@ -5,6 +5,7 @@
     --font-title: "Plus Jakarta Sans", sans-serif;
     --font-button: "Manrope", sans-serif;
     --green-100: #99EA48;
+    --dark-100: #1F1F1F;
 }
 
 * {
@@ -111,7 +112,7 @@
 
 .title span {
     font-style: oblique;
-    text-decoration: underline gray;
+    text-decoration: underline var(--green-100);
 }
 
 .title p {

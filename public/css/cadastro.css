@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --font-title: "Plus Jakarta Sans", sans-serif;
+    --font-button: "Manrope", sans-serif;
+    --green-100: #99EA48;
+    --dark-100: #1F1F1F;
+    --dark-text: #333333;
+    --gray: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    
+}
+
+body {
+    background-color: var(--dark-100);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    margin-left: 4rem;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    margin-left: 5rem;
+}
+
+/* .navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+} */
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+    color: var(--green-100);
+}
+
+.btn-navbar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-navbar .login {
+    background-color: transparent;
+    padding: 0.7rem;
+    border-radius: 21px;
+    border: 1px solid #ffffff;
+    color: white;
+
+    font-family: var(--font-button);
+    font-weight: bold;
+
+    margin-right: 2rem;
+
+    transition: all 0.4s ease;
+}
+
+.btn-navbar .login:hover {
+    background-color: var(--green-100);
+    color: #000000;
+    border: 1px solid var(--green-100);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    margin-left: 5rem;
+}
+
+.title h1 {
+    color: white;
+    font-family: var(--font-title);
+    font-weight: bold;
+    margin-left: 5rem;
+    font-size: 3vw;
+    width: 100%;
+}
+
+.title p {
+    color: var(--gray);
+    font-family: var(--font-title);
+    margin-left: 5rem;
+    font-size: 1.3vw;
+    width: 100%;
+}
+
+.img {
+    margin-left: 2rem;
+}
+
+.form {
+    margin-right: 3rem;
+    background-color: white;
+    border-radius: 12px;
+    width: 50%;
+}
+
+.conteudoForm {
+    padding: 2.5rem;
+}
+
+.conteudoForm h3 {
+    font-family: var(--font-title);
+    font-weight: bold;
+    font-size: 2vw;
+
+    margin-left: 3rem;
+
+    color: var(--dark-text);
+    /* text-decoration: underline var(--dark-text); */
+}
+
+.nomes {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+
+    margin-left: 3rem;
+}
+
+.nome label {
+    color: var(--gray);
+    font-family: var(--font-title);
+    font-size: 16px;
+}
+
+.sobrenome label {
+    color: var(--gray);
+    font-family: var(--font-title);
+    font-size: 16px;
+}
+
+.nome input {
+    padding: 0.5rem;
+    height: 1.9rem;
+    width: 15rem;
+    border-radius: 12px;
+    border: 1px solid #66666675;
+
+    margin-top: 0.6rem;
+}
+
+.sobrenome input {
+    padding: 0.5rem;
+    height: 1.9rem;
+    width: 15rem;
+    border-radius: 12px;
+    border: 1px solid #66666675;
+
+    margin-top: 0.6rem;
+}
