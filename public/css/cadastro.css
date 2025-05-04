@@ -10,6 +10,16 @@
     --gray: #666666;
 }
 
+::-webkit-scrollbar{
+    border-radius: 8px;
+    background-color: var(--dark-100);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: var(--dark-100);
+    border-radius: 8px;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -71,14 +81,14 @@ body {
 .btn-navbar .login {
     background-color: transparent;
     padding: 0.7rem;
-    border-radius: 21px;
+    border-radius: 16px;
     border: 1px solid #ffffff;
     color: white;
 
     font-family: var(--font-button);
     font-weight: bold;
 
-    margin-right: 2rem;
+    margin-right: 6.5rem;
 
     transition: all 0.4s ease;
 }
@@ -93,10 +103,13 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    margin-top: 2rem;
 }
 
 .title {
     margin-left: 5rem;
+    
 }
 
 .title h1 {
@@ -118,10 +131,11 @@ body {
 
 .img {
     margin-left: 2rem;
+
 }
 
 .form {
-    margin-right: 3rem;
+    margin-right: 8rem;
     background-color: white;
     border-radius: 12px;
     width: 50%;
@@ -180,4 +194,116 @@ body {
     border: 1px solid #66666675;
 
     margin-top: 0.6rem;
+}
+
+.email {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.email label {
+    color: var(--gray);
+    font-family: var(--font-title);
+    font-size: 16px;
+}
+
+.email input {
+    padding: 0.5rem;
+    height: 1.9rem;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid #66666675;
+
+    margin-top: 0.6rem;
+}
+
+.cpf {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.cpf label {
+    color: var(--gray);
+    font-family: var(--font-title);
+    font-size: 16px;
+}
+
+.cpf input {
+    padding: 0.5rem;
+    height: 1.9rem;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid #66666675;
+
+    margin-top: 0.6rem;
+}
+
+.senha {
+    margin-left: 3rem;
+    margin-top: 1rem;
+   
+}
+
+.senha label {
+    color: var(--gray);
+    font-family: var(--font-title);
+    font-size: 16px;
+}
+
+.senha input {
+    padding: 0.5rem;
+    height: 1.9rem;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid #66666675;
+
+    margin-top: 0.6rem;
+}
+
+.btn {
+    display: flex;
+    gap: 2rem;
+
+    margin-left: 3rem;
+    margin-top: 2rem;
+
+    width: 100%;
+
+}
+
+.btn button {
+    padding: 0.8rem;
+    border-radius: 24px;
+    border: 1px solid var(--green-100);
+    background-color: var(--green-100);
+    color: var(--dark-100);
+    font-family: var(--font-button);
+    font-weight: bold;
+    width: 10rem;
+
+    transition: all 0.4s ease;
+}
+
+.btn button:hover {
+    background-color: transparent;
+    color: var(--dark-100);
+    border: 1px solid var(--dark-100);
+}
+
+.acesso {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.acesso p {
+    font-size: 1rem;
+    font-family: var(--font-title);
+    color: var(--gray);
+    margin-top: 0.5rem;
+
+}
+
+.acesso a {
+    color: var(--dark-100);
 }

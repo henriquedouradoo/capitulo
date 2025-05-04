@@ -8,6 +8,16 @@
     --dark-100: #1F1F1F;
 }
 
+::-webkit-scrollbar{
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 8px;
+  }
+
 * {
     margin: 0;
     padding: 0;
