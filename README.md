@@ -27,11 +27,10 @@ A Bíblia é uma fonte rica de ensinamentos com aplicações na vida pessoal, pr
 
 - ✅ Cadastro e Login de Usuário
   <br>
-  ![cadastro](https://github.com/henriquedouradoo/capitulo/blob/723894648c0304dd54b6e8ac95d7d263aedc2d62/prints/cadastro.png)
+  <img src="./prints/cadastro.png"> 
 <br>
-  ![login](https://github.com/henriquedouradoo/capitulo/blob/723894648c0304dd54b6e8ac95d7d263aedc2d62/prints/login.png)
+ <img src="./prints/login.png"> 
 
-  
 - ✅ Integração com API e Banco de Dados
   
 - ✅ Quiz de Produtividade de Leitura
