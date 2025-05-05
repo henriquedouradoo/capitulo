@@ -55,3 +55,13 @@ Siga os passos abaixo para executar o projeto em ambiente de desenvolvimento:
 ```bash
 git clone https://github.com/henriquedouradoo/capitulo.git
 
+cd capitulo
+
+npm install
+
+npm start
+
+http://localhost:3333
+
+```
+
