@@ -23,14 +23,14 @@ A Bíblia é uma fonte rica de ensinamentos com aplicações na vida pessoal, pr
 
 - ✅ Plataforma Web
 <br>
-- ![image](https://github.com/user-attachments/assets/49eca3ac-0179-4edd-b797-10c019c7a174)
+- ![home](https://github.com/user-attachments/assets/49eca3ac-0179-4edd-b797-10c019c7a174)
 
   
 - ✅ Cadastro e Login de Usuário
   <br>
-- ![image](https://github.com/user-attachments/assets/f6ef65eb-4994-4ead-b4c0-9f4d00a121ea)
+- ![cadastro](https://github.com/user-attachments/assets/f6ef65eb-4994-4ead-b4c0-9f4d00a121ea)
 <br>
-- ![image](https://github.com/user-attachments/assets/5f0befd2-52f4-485c-9831-cae5d2d00afd)
+- ![login](https://github.com/user-attachments/assets/5f0befd2-52f4-485c-9831-cae5d2d00afd)
 
   
 - ✅ Integração com API e Banco de Dados
