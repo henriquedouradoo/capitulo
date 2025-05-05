@@ -21,17 +21,31 @@ A Bíblia é uma fonte rica de ensinamentos com aplicações na vida pessoal, pr
 
 ### Funcionalidades principais
 
-- ✅ Plataforma Web Responsiva  
-- ✅ Cadastro e Login de Usuário  
-- ✅ Integração com API e Banco de Dados  
-- ✅ Quiz de Produtividade de Leitura  
+- ✅ Plataforma Web
+<br>
+![image](https://github.com/user-attachments/assets/49eca3ac-0179-4edd-b797-10c019c7a174)
+
+  
+- ✅ Cadastro e Login de Usuário
+  <br>
+- ![image](https://github.com/user-attachments/assets/f6ef65eb-4994-4ead-b4c0-9f4d00a121ea)
+<br>
+- ![image](https://github.com/user-attachments/assets/5f0befd2-52f4-485c-9831-cae5d2d00afd)
+
+  
+- ✅ Integração com API e Banco de Dados
+  
+- ✅ Quiz de Produtividade de Leitura
+  
   - Medição da frequência, motivação e engajamento  
-  - Armazenamento de respostas para geração de KPIs  
-- ✅ Dashboard Administrativo  
+  - Armazenamento de respostas para geração de KPIs
+    
+- ✅ Dashboard Administrativo
   - Indicadores sobre:  
     - Frequência de leitura  
     - Resultados dos quizzes  
-    - Versículos mais acessados  
+    - Versículos mais acessados
+      
 - ✅ Seção de Versículos  
   - Destaques como "lições de vida" ou "insights de sabedoria"  
   - Métricas de visualização por versículo  
