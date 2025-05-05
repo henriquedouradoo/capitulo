@@ -23,7 +23,7 @@ A Bíblia é uma fonte rica de ensinamentos com aplicações na vida pessoal, pr
 
 - ✅ Plataforma Web
 <br>
-  ![home](https://github.com/user-attachments/assets/49eca3ac-0179-4edd-b797-10c019c7a174)
+  ![home](https://github.com/githubusercontent.com/assets/49eca3ac-0179-4edd-b797-10c019c7a174)
 
   
 - ✅ Cadastro e Login de Usuário
