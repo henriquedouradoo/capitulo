@@ -23,13 +23,13 @@ A Bíblia é uma fonte rica de ensinamentos com aplicações na vida pessoal, pr
 
 - ✅ Plataforma Web
 <br>
-![home](prints/home.png)
+![home]([prints/home.png](https://github.com/henriquedouradoo/capitulo/blob/723894648c0304dd54b6e8ac95d7d263aedc2d62/prints/home.png)
 
 - ✅ Cadastro e Login de Usuário
   <br>
-  ![cadastro](https://github.com/user-attachments/assets/f6ef65eb-4994-4ead-b4c0-9f4d00a121ea)
+  ![cadastro](https://github.com/henriquedouradoo/capitulo/blob/723894648c0304dd54b6e8ac95d7d263aedc2d62/prints/cadastro.png)
 <br>
-  ![login](https://github.com/user-attachments/assets/5f0befd2-52f4-485c-9831-cae5d2d00afd)
+  ![login](https://github.com/henriquedouradoo/capitulo/blob/723894648c0304dd54b6e8ac95d7d263aedc2d62/prints/login.png)
 
   
 - ✅ Integração com API e Banco de Dados
