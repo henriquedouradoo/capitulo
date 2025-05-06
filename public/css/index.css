@@ -11,7 +11,8 @@
 }
 
 ::-webkit-scrollbar{
-    border-radius: 8px;
+    border-radius: 1px;
+    width: 1px;
     background-color: var(--dark-100);
   }
 
@@ -136,8 +137,8 @@
 }
 
 .title button {
-    background-color: black;
-    border: 1px solid black;
+    background-color: var(--dark-100);
+    border: 1px solid var(--dark-100);
     font-weight: bold;
     font-family: var(--font-button);
     color: white;
@@ -155,7 +156,7 @@
     background-color: var(--green-100);
     border: 1px solid var(--green-100);
 
-    color: black;
+    color: var(--dark-100);
 }
 
 .img-home {
@@ -169,4 +170,52 @@
     width: 25rem;
     /* border: 12px solid rgba(0, 0, 0, 0.479); */
     margin-top: 2.6rem;
+}
+
+.sobre {
+    height: 100vh;
+    
+    gap: 4rem;
+    padding: 3rem;
+    font-family: var(--font-title);
+
+    background-color: var(--dark-100);
+
+}
+
+.sobre h2 {
+    font-size: 4vw;
+    color: white;
+    margin-top: 5rem;
+}
+
+.title-sobre span {
+    color: var(--green-100);
+}
+
+.conteudo-sobre {
+    display: flex;
+    font-family: var(--font-title);
+    /* justify-content: space-around; */
+    gap: 3rem;
+    width: 100%;
+}
+
+.conteudo-sobre h3 {
+    font-size: 4vw;
+    color: white;
+}
+
+.conteudo-sobre p {
+    color: var(--gray);
+}
+
+.conteudo-sobre img {
+    width: 30rem;
+}
+
+.img-sobre {
+    border: 1px solid var(--green-100);
+    height: 500px;
+    width: 800px;
 }
