@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+#msg h2 {
+    font-size: 4rem;
+    color: green;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#msg p {
+    font-size: 2rem;
+}
+
+</style>
+
+<body>
+    <h1>TESTE COM JSON</h1>
+    <div id="msg"></div>
+
+    <script>
+        fetch('versiculos.json')
+            .then(response => response.json())
+            .then(data => {
+                const infoVersiculo = document.getElementById('msg');
+                infoVersiculo.innerHTML += `
+                    <p>Versículo: ${data[data.length-1].versiculo}</p>
+                    <h2>${data[data.length-1].localizacao}</h2>
+                `;
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o JSON:', error);
+            });
+    </script>
+</body>
+
+</html>
