@@ -23,8 +23,4 @@ create table medida (
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
 
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
-
-select * from usuario;
-
 

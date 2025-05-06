@@ -6,15 +6,17 @@
     --font-button: "Manrope", sans-serif;
     --green-100: #99EA48;
     --dark-100: #1F1F1F;
+    --dark-text: #333333;
+    --gray: #666666;
 }
 
 ::-webkit-scrollbar{
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--dark-100);
   }
 
   ::-webkit-scrollbar-thumb{
-    background: #fff;
+    background: var(--dark-100);
     border-radius: 8px;
   }
 
