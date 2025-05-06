@@ -84,11 +84,11 @@
               <input type="password" id="ipt_senha">
             </div>
 
-            <div class="senha">
+            <!-- <div class="senha">
                 <label>Confirme a Senha</label>
                 <br>
                 <input type="password" id="ipt_senhaConfirm">
-              </div>
+              </div> -->
 
               <div class="check">
                 <input type="checkbox">
@@ -96,7 +96,7 @@
               </div>
       
             <div class="btn">
-              <a href=""><button>Entrar</button></a>
+              <button onclick="entrar()">Entrar</button></a>
               <div class="acesso">
               <p>Não tem cadastro? <a href="cadastro.html">Cadastre-se</a></p>
             </div>
@@ -119,14 +119,17 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+        
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            alert('Mensagem de erro para todos os campos em branco')
             finalizarAguardar();
             return false;
         }
@@ -161,7 +164,7 @@
                     sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./dashboard/dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
