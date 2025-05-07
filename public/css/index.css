@@ -246,3 +246,41 @@
     width: 40rem;
     margin-top: 4rem;
 }
+
+.versiculos {
+    background-color: white;
+
+    margin-top: 6rem;
+
+}
+
+.versiculos h2 {
+    font-family: var(--font-title);
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3vw;
+    color: var(--dark-100);
+    
+}
+
+.versiculoTexto {
+    text-align: center;
+    font-family: var(--dark-text);
+    width: 100%;
+    margin-top: 3rem;
+    
+}
+
+.versiculoTexto h3 {
+    font-family: var(--font-title);
+    font-size: 3.4vw;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.versiculoTexto h4 {
+    margin-top: 4rem;
+    font-family: var(--font-title);
+    color: var(--dark-text);
+    font-size: 2rem;
+}
