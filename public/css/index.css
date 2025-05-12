@@ -288,6 +288,7 @@
 .footer {
     background-color: var(--dark-100);
     padding: 2rem 0;
+
 }
 
 .contato {
@@ -370,4 +371,34 @@
     right: 6rem;
 }
 
+.info-footer {
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    margin-right: 10%;
+    color: white;
+    font-family: var(--font-title);
 
+    position: relative;
+    top: -9rem;
+}
+
+.info-footer h3 {
+    font-weight: bold;
+    color: var(--green-100);
+}
+
+.info-footer p a {
+    color: white;
+    text-decoration: none;
+}
+
+.info-footer li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.info-footer li a:hover {
+    color: var(--green-100);
+}
