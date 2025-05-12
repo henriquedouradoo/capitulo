@@ -41,7 +41,7 @@
     z-index: 1000;
 }
 
-.logo {
+.logo a {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -273,14 +273,101 @@
 
 .versiculoTexto h3 {
     font-family: var(--font-title);
-    font-size: 3.4vw;
-    width: 70%;
-    margin-left: 15%;
+    font-size: 2.4vw;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .versiculoTexto h4 {
     margin-top: 4rem;
     font-family: var(--font-title);
-    color: var(--dark-text);
+    color: var(--green-100);
     font-size: 2rem;
 }
+
+.footer {
+    background-color: var(--dark-100);
+    padding: 2rem 0;
+}
+
+.contato {
+    width: 100%;
+    text-align: center;
+}
+
+.conteudo-contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    width: 80%;
+    margin: 0 auto;
+    
+    border: 2px solid var(--dark-100);
+    background-color: var(--green-100);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+}
+
+.conteudo-contato:hover {
+    background-color: white;
+
+}
+
+.conteudo-contato h2 {
+    color: #000;
+    font-size: 3rem;
+    font-family: var(--font-title);
+}
+
+.conteudo-contato button {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-button);
+    transition: all 0.4s ease;
+}
+
+.conteudo-contato:hover button {
+    background-color: var(--green-100);
+    
+}
+
+.conteudo-contato button:hover {
+    background-color: #6ea833;
+    
+}
+
+.links {
+    margin-top: 3rem;
+}
+
+.links svg {
+    margin-left: 7rem;
+    padding: 1rem;
+}
+
+.title-link {
+   padding: 1rem;
+   margin-left: 7rem;
+    color: white;
+    font-family: var(--font-title);
+    width: 40%;
+    display: flex;
+}
+
+.link-midia {
+    display: flex;
+}
+
+.insta {
+    position: relative;
+    right: 6rem;
+}
+
+

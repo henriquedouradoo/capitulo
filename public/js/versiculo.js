@@ -1,4 +1,4 @@
-fetch('../versiculos.json')
+fetch('../data/versiculos.json')
 .then(response => response.json())
 .then(data => {
     const infoVersiculo = document.getElementById('versiculoTexto');
