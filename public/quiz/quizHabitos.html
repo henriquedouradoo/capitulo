@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz de Leitura</title>
+  <link rel="stylesheet" href="quizHabitos.css">
+</head>
+<body>
+
+  <!-- Tela Inicial -->
+  <div id="inicio-container" style="display: block;">
+    <h1>Bem-vindo ao Quiz de Hábitos de Leitura!</h1>
+    <button id="botao-iniciar">Iniciar Quiz</button>
+    <a href="../dashboard/dashboard.html"><button>Voltar para a Dashboard</button></a>
+  </div>
+
+  <!-- Quiz -->
+  <div id="quiz-container">
+    <h2 id="pergunta"></h2>
+    <button class="alternativa" id="A"></button>
+    <button class="alternativa" id="B"></button>
+    <button class="alternativa" id="C"></button>
+    <button class="alternativa" id="D"></button>
+    <p id="resultado"></p>
+  </div>
+
+  <script>
+    const listaDeQuestoes = [
+      {
+        pergunta: "Quantos livros você leu nos últimos 12 meses?",
+        alternativaA: "Nenhum",
+        alternativaB: "1 a 3 livros",
+        alternativaC: "4 a 6 livros",
+        alternativaD: "Mais de 6 livros"
+      },
+      {
+        pergunta: "Em média, quanto tempo você dedica à leitura por dia?",
+        alternativaA: "Menos de 10 minutos",
+        alternativaB: "10 a 30 minutos",
+        alternativaC: "31 a 60 minutos",
+        alternativaD: "Mais de 1 hora"
+      },
+      {
+        pergunta: "Quantas vezes por semana você lê por prazer?",
+        alternativaA: "Nenhuma vez",
+        alternativaB: "1 a 2 vezes",
+        alternativaC: "3 a 4 vezes",
+        alternativaD: "5 vezes ou mais"
+      },
+      {
+        pergunta: "Quantos livros você tem atualmente em casa (em papel ou digitais)?",
+        alternativaA: "Nenhum",
+        alternativaB: "1 a 10",
+        alternativaC: "11 a 30",
+        alternativaD: "Mais de 30"
+      },
+      {
+        pergunta: "Com que frequência você visita bibliotecas ou livrarias?",
+        alternativaA: "Nunca",
+        alternativaB: "Raramente (1 vez por semestre)",
+        alternativaC: "Ocasionalmente (1 vez por mês)",
+        alternativaD: "Frequentemente (toda semana ou quinzenalmente)"
+      }
+    ];
+
+    let indiceAtual = 0;
+
+    function mostrarQuestao() {
+      const questao = listaDeQuestoes[indiceAtual];
+      document.getElementById("pergunta").innerText = questao.pergunta;
+      document.getElementById("A").innerText = questao.alternativaA;
+      document.getElementById("B").innerText = questao.alternativaB;
+      document.getElementById("C").innerText = questao.alternativaC;
+      document.getElementById("D").innerText = questao.alternativaD;
+    }
+
+    function avancarQuestao() {
+      indiceAtual++;
+      if (indiceAtual < listaDeQuestoes.length) {
+        mostrarQuestao();
+      } else {
+        document.getElementById("quiz-container").innerHTML = `
+          <h2>Obrigado por responder!</h2>
+          <p id="resultado">Suas respostas foram registradas. Continue cultivando bons hábitos de leitura!</p>
+          <a href="../dashboard/dashboard.html"><button>Voltar para a Dashboard</button></a>
+        `;
+      }
+    }
+
+    // Evento de clique nas alternativas
+    document.querySelectorAll(".alternativa").forEach(botao => {
+      botao.addEventListener("click", avancarQuestao);
+    });
+
+    // Evento do botão de início
+    document.getElementById("botao-iniciar").addEventListener("click", () => {
+      document.getElementById("inicio-container").style.display = "none";
+      document.getElementById("quiz-container").style.display = "block";
+      mostrarQuestao();
+    });
+  </script>
+
+</body>
+</html>

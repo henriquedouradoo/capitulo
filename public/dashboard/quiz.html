@@ -66,7 +66,7 @@
         <div class="cards">
         <div class="card1">
             <h1>Quiz: Hábito de Leitura</h1>
-            <button>Iniciar Quiz</button>
+            <button onclick="quizLeitura()">Iniciar Quiz</button>
         </div>
 
         <div class="card2">
@@ -97,7 +97,16 @@ function quizEnsinamentos() {
 
     alert('Direcionando para seu Quiz!')
     setTimeout(() => {
-        window.location = '/quiz/quiz.html'
+        window.location = '/quiz/quizEnsinamentos.html'
+    }, 1000)
+    
+}
+
+function quizLeitura() {
+
+    alert('Direcionando para seu Quiz!')
+    setTimeout(() => {
+        window.location = '/quiz/quizHabitos.html'
     }, 1000)
     
 }
