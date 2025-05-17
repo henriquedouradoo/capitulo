@@ -71,7 +71,7 @@
 
         <div class="card2">
             <h1>Quiz: Ensinamentos Bíblicos</h1>
-            <button>Iniciar Quiz</button>
+            <button onclick="quizEnsinamentos()">Iniciar Quiz</button>
         </div>
         </div>
 
@@ -83,13 +83,23 @@
                 <h3>Pontuação Máxima <br> (Quiz Ensinamentos Bíblicos)</h3>
             </div>
             <div class="metrica3">
-                <h3>Último Acesso <br> (Quiz Hábito de Leitura)</h3>
-            </div>
-            <div class="metrica4">
-                <h3>Último Acesso <br> (Quiz Ensinamentos Bíblicos)</h3>
+                <h3>Total de Vezes<br> Jogadas nos Quizzes </h3>
             </div>
         </div>
     </div>
     
 </body>
 </html>
+
+<script>
+
+function quizEnsinamentos() {
+
+    alert('Direcionando para seu Quiz!')
+    setTimeout(() => {
+        window.location = '/quiz/quiz.html'
+    }, 1000)
+    
+}
+
+</script>

@@ -24,6 +24,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 
 }
 
@@ -170,7 +171,7 @@
 
 .metrica1 {
     background-color: #1F1F1F;
-    width: 282.5px;
+    width: 24.6rem;
     height: 170px;
 
     display: flex;
@@ -185,7 +186,7 @@
 
 .metrica2 {
     background-color: #1F1F1F;
-    width: 282.5px;
+    width: 24.6rem;
     height: 170px;
 
     display: flex;
@@ -199,21 +200,7 @@
 
 .metrica3 {
     background-color: #1F1F1F;
-    width: 282.5px;
-    height: 170px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--white);
-
-}
-
-
-.metrica4 {
-    background-color: #1F1F1F;
-    width: 282.5px;
+    width: 24.6rem;
     height: 170px;
 
     display: flex;
