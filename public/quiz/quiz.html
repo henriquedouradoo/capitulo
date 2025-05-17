@@ -11,8 +11,12 @@
 
 <body onload="onloadEsconder()">
 
+    <div class="title">
+    <h1>Ensinamentos Bíblicos</h1>
+        </div>
     <div class="btn-start">
         <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+        <button id="btnRetorno" onclick="retornarDashboard()">Voltar para Dashboard</button>
     </div>
 
     <div id="pontuacaoEJogo" class="content">
@@ -137,12 +141,14 @@
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "none"
+        
     }
 
     function iniciarQuiz() {
         document.getElementById('pontuacao').style.display = "flex"
         document.getElementById('jogo').style.display = "flex"
         document.getElementById('btnIniciarQuiz').style.display = "none"
+        document.getElementById('btnRetorno').style.display = "none"
 
         document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
 
@@ -220,6 +226,13 @@
 
     function dashboard() {
         // atualiza a página
+        alert('Direcionando para Dashboard!')
+        setTimeout(() => {
+            window.location = '/dashboard/dashboard.html'
+        }, "2000"); 
+    }
+
+    function retornarDashboard() {
         alert('Direcionando para Dashboard!')
         setTimeout(() => {
             window.location = '/dashboard/dashboard.html'

@@ -15,6 +15,15 @@ body {
 
 }
 
+.title {
+    font-family: var(--font-title);
+    color: var(--green-100);
+    font-size: 2vw;
+    text-align: center;
+    /* position: relative;
+    top: 10rem; */
+}
+
 .content {
     text-align: center;
 }
@@ -24,17 +33,35 @@ body {
 }
 
 #btnIniciarQuiz {
-    padding: 1rem;
+    padding: 2rem;
+    width: 15rem;
     background-color: var(--green-100);
     border-radius: 12px;
     font-family: var(--font-button);
-    font-weight: bold;
+    font-weight: 600;
     border: 1px solid var(--green-100);
 
     transition: all 0.4s ease;
 
-    margin-top: 20%;
+    margin-top: 10%;
 
+}
+
+#btnRetorno {
+    padding: 2rem;
+    border-radius: 12px;
+    width: 15rem;
+    background-color: var(--green-100);
+    font-family: var(--font-button);
+    border: 1px solid var(--green-100);
+    font-weight: 600;
+
+    transition: all 0.4s ease;
+}
+
+#btnRetorno:hover {
+    background-color: white;
+    border: 1px solid white;
 }
 
 #btnIniciarQuiz:hover {
