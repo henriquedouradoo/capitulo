@@ -4,18 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz de Leitura</title>
-  <link rel="stylesheet" href="quizHabitos.css">
+  <link rel="stylesheet" href="../css/quizHabitos.css">
 </head>
 <body>
 
-  <!-- Tela Inicial -->
   <div id="inicio-container" style="display: block;">
     <h1>Bem-vindo ao Quiz de Hábitos de Leitura!</h1>
     <button id="botao-iniciar">Iniciar Quiz</button>
     <a href="../dashboard/dashboard.html"><button>Voltar para a Dashboard</button></a>
   </div>
 
-  <!-- Quiz -->
   <div id="quiz-container">
     <h2 id="pergunta"></h2>
     <button class="alternativa" id="A"></button>
@@ -88,12 +86,10 @@
       }
     }
 
-    // Evento de clique nas alternativas
     document.querySelectorAll(".alternativa").forEach(botao => {
       botao.addEventListener("click", avancarQuestao);
     });
 
-    // Evento do botão de início
     document.getElementById("botao-iniciar").addEventListener("click", () => {
       document.getElementById("inicio-container").style.display = "none";
       document.getElementById("quiz-container").style.display = "block";

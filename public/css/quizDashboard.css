@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --font-title: "Plus Jakarta Sans", sans-serif;
+    --font-button: "Manrope", sans-serif;
+    --green-100: #99EA48;
+    --dark-100: #1F1F1F;
+    --dark-text: #333333;
+    --gray: #666666;
+    --white: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+    border-radius: 8px;
+    background-color: var(--dark-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-100);
+    border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+
+    /* position: fixed; */
+    background: white;
+    /* width: 100%; */
+
+    /* z-index: 1000; */
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+    color: var(--green-100);
+}
+
+.btn-navbar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-navbar .login {
+    background-color: transparent;
+    padding: 0.7rem;
+    border-radius: 21px;
+    border: 1px solid black;
+
+    font-family: var(--font-button);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.btn-navbar .login:hover {
+    background-color: var(--green-100);
+    color: black;
+}
+
+.btn-navbar .notificacao {
+    padding: 0.5rem;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 3rem;
+
+    transition: all 0.4s ease;
+}
+
+.notificacao:hover {
+    background-color: var(--green-100);
+    border: 1px solid var(--green-100);
+}
+
+.home {
+    margin-top: 1rem;
+    font-family: var(--font-title);
+    margin-left: 5rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-left: 4rem;
+    justify-content: center;
+}
+
+.cards button {
+    padding: 1rem;
+    background-color: var(--dark-100);
+    color: white;
+    border-radius: 5px;
+    font-family: var(--font-button);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.cards button:hover {
+    background-color: white;
+    color: var(--dark-100);
+}
+
+.card1 {
+    background-color: var(--green-100);
+    width: 87%;
+    height: 10vh;
+
+    padding: 1rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card2 {
+    background-color: var(--green-100);
+    width: 87%;
+    height: 10vh;
+
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.metricas {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+.metrica1 {
+    background-color: #1F1F1F;
+    width: 24.6rem;
+    height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+
+}
+
+
+
+.metrica2 {
+    background-color: #1F1F1F;
+    width: 24.6rem;
+    height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+
+}
+
+
+.metrica3 {
+    background-color: #1F1F1F;
+    width: 24.6rem;
+    height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+
+}
