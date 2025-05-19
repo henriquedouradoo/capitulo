@@ -93,7 +93,21 @@
 
 <script>
 
-    b_pontos.innerHTML = sessionStorage.ULTIMA_PONTUACAO;
+    // resposta.json().then(json => {
+    //                 console.log(json);
+    //                 console.log(JSON.stringify(json));
+    //                 sessionStorage.ULTIMA_PONTUACAO = json.quizEnsinamentos;
+                    
+    //                  b_pontos.innerHTML = sessionStorage.ULTIMA_PONTUACAO = json.quizEnsinamentos;
+
+    //             });
+
+    const pontuacao = localStorage.getItem('pontuacaoUsuario');
+
+    if (pontuacao !== null) {
+    const ultimaPontuacao = document.getElementById('b_pontos')
+    ultimaPontuacao.innerHTML = `${pontuacao}`;
+  }
 
 
 function quizEnsinamentos() {

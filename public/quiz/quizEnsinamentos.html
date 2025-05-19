@@ -142,7 +142,7 @@
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "none"
-
+        document.getElementById('btnRetorno').style.display = "none"
     }
 
     function iniciarQuiz() {
@@ -352,6 +352,7 @@
             if (resposta.ok) {
                 alert("Pontuação Registrada com Sucesso!");
                 sessionStorage.ULTIMA_PONTUACAO = pontuacaoUsuario;
+                localStorage.setItem('pontuacaoQuiz', pontuacaoFinal);
                 console.log(sessionStorage.ULTIMA_PONTUACAO);
             } else {
                 alert("Erro ao registrar sua pontuação");
