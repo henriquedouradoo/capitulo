@@ -12,8 +12,8 @@
 <body onload="onloadEsconder()">
 
     <div class="title">
-    <h1>Ensinamentos Bíblicos</h1>
-        </div>
+        <h1>Ensinamentos Bíblicos</h1>
+    </div>
     <div class="btn-start">
         <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
         <button id="btnRetorno" onclick="retornarDashboard()">Voltar para Dashboard</button>
@@ -83,51 +83,51 @@
 </html>
 <script>
     const listaDeQuestoes = [
-    {
-        pergunta: "“Tudo posso naquele que me fortalece.” (Filipenses 4:13)",
-        alternativaA: "Buscar reconhecimento dos outros",
-        alternativaB: "Depender da própria força",
-        alternativaC: "Confiar em Deus para superar desafios",
-        alternativaD: "Evitar mudanças na vida",
-        alternativaCorreta: "alternativaC"
-    },
+        {
+            pergunta: "“Tudo posso naquele que me fortalece.” (Filipenses 4:13)",
+            alternativaA: "Buscar reconhecimento dos outros",
+            alternativaB: "Depender da própria força",
+            alternativaC: "Confiar em Deus para superar desafios",
+            alternativaD: "Evitar mudanças na vida",
+            alternativaCorreta: "alternativaC"
+        },
 
-    {
-        pergunta: "“A resposta branda desvia o furor, mas a palavra dura suscita a ira.” (Provérbios 15:1)",
-        alternativaA: "Falar com autoridade sempre resolve",
-        alternativaB: "Evitar conversas difíceis",
-        alternativaC: "Ignorar os conflitos",
-        alternativaD: "Ter calma e gentileza nas discussões",
-        alternativaCorreta: "alternativaD"
-    },
+        {
+            pergunta: "“A resposta branda desvia o furor, mas a palavra dura suscita a ira.” (Provérbios 15:1)",
+            alternativaA: "Falar com autoridade sempre resolve",
+            alternativaB: "Evitar conversas difíceis",
+            alternativaC: "Ignorar os conflitos",
+            alternativaD: "Ter calma e gentileza nas discussões",
+            alternativaCorreta: "alternativaD"
+        },
 
-    {
-        pergunta: "“Onde está o seu tesouro, aí também estará o seu coração.” (Mateus 6:21)",
-        alternativaA: "O que você valoriza define suas prioridades",
-        alternativaB: "Guardar dinheiro é mais importante que tudo",
-        alternativaC: "Nunca mude de opinião",
-        alternativaD: "Trabalhe apenas pelo sucesso material",
-        alternativaCorreta: "alternativaA"
-    },
+        {
+            pergunta: "“Onde está o seu tesouro, aí também estará o seu coração.” (Mateus 6:21)",
+            alternativaA: "O que você valoriza define suas prioridades",
+            alternativaB: "Guardar dinheiro é mais importante que tudo",
+            alternativaC: "Nunca mude de opinião",
+            alternativaD: "Trabalhe apenas pelo sucesso material",
+            alternativaCorreta: "alternativaA"
+        },
 
-    {
-        pergunta: "“Porque Deus não nos deu espírito de covardia, mas de poder, amor e equilíbrio.” (2 Timóteo 1:7)",
-        alternativaA: "Devemos agir com medo",
-        alternativaB: "O medo é natural e deve nos controlar",
-        alternativaC: "Somos chamados a agir com coragem, amor e sabedoria",
-        alternativaD: "Devemos evitar responsabilidades",
-        alternativaCorreta: "alternativaC"
-    },
+        {
+            pergunta: "“Porque Deus não nos deu espírito de covardia, mas de poder, amor e equilíbrio.” (2 Timóteo 1:7)",
+            alternativaA: "Devemos agir com medo",
+            alternativaB: "O medo é natural e deve nos controlar",
+            alternativaC: "Somos chamados a agir com coragem, amor e sabedoria",
+            alternativaD: "Devemos evitar responsabilidades",
+            alternativaCorreta: "alternativaC"
+        },
 
-    {
-        pergunta: "“Se alguém quiser acompanhar-me, negue-se a si mesmo, tome a sua cruz e siga-me.” (Mateus 16:24)",
-        alternativaA: "Evite sacrifícios sempre que puder",
-        alternativaB: "Seguir princípios exige esforço e renúncia",
-        alternativaC: "A vida deve ser fácil e sem desafios",
-        alternativaD: "Só siga se tudo estiver garantido",
-        alternativaCorreta: "alternativaB"
-    }
-]
+        {
+            pergunta: "“Se alguém quiser acompanhar-me, negue-se a si mesmo, tome a sua cruz e siga-me.” (Mateus 16:24)",
+            alternativaA: "Evite sacrifícios sempre que puder",
+            alternativaB: "Seguir princípios exige esforço e renúncia",
+            alternativaC: "A vida deve ser fácil e sem desafios",
+            alternativaD: "Só siga se tudo estiver garantido",
+            alternativaCorreta: "alternativaB"
+        }
+    ]
 
     // variáveis globais    
     let numeroDaQuestaoAtual = 0
@@ -136,12 +136,13 @@
     let certas = 0
     let erradas = 0
     let quantidadeDeQuestoes = listaDeQuestoes.length
+    var idQuizEnsinamentos = 1;
     // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
 
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "none"
-        
+
     }
 
     function iniciarQuiz() {
@@ -229,14 +230,14 @@
         alert('Direcionando para Dashboard!')
         setTimeout(() => {
             window.location = '/dashboard/dashboard.html'
-        }, 1000); 
+        }, 1000);
     }
 
     function retornarDashboard() {
         alert('Direcionando para Dashboard!')
         setTimeout(() => {
             window.location = '/dashboard/dashboard.html'
-        }, 1000); 
+        }, 1000);
     }
 
     function checarResposta() {
@@ -322,5 +323,39 @@
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
+        enviandoRespostas();
+
     }
+
+    function enviandoRespostas() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+        console.log(sessionStorage.ID_USUARIO);
+        var pontuacaoUsuario = pontuacaoFinal;
+
+        fetch("/quiz/quizEnsinamentos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                idUsuarioServer: idUsuario,
+                pontuacaoServer: pontuacaoUsuario,
+                idQuizEnsinamentosServer: idQuizEnsinamentos
+            }),
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+            } else {
+                alert("Erro ao registrar sua pontuação");
+            }
+        })
+        .catch(function (erro) {
+            console.error("Erro na requisição: ", erro);
+            alert("Erro ao enviar a pontuação.");
+        });
+    }
+
 </script>
