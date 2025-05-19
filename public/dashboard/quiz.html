@@ -77,7 +77,7 @@
 
         <div class="metricas">
             <div class="metrica1">
-                <h3>Perfil de Leitor <br> (Quiz Hábito de Leitura)</h3>
+                <h3>Perfil de Leitor <br> (Quiz Hábito de Leitura) <br><br> <span id="b_perfil"></span></h3>
             </div>
             <div class="metrica2">
                 <h3>Última Pontuação <br> (Quiz Ensinamentos Bíblicos) <br> <br> <span id="b_pontos"></span></h3>
@@ -107,6 +107,13 @@
     if (pontuacao !== null) {
     const ultimaPontuacao = document.getElementById('b_pontos')
     ultimaPontuacao.innerHTML = `${pontuacao}`;
+  }
+
+  const perfil = localStorage.getItem('perfilQuiz');
+
+    if (perfil !== null) {
+    const perfilLeitor = document.getElementById('b_perfil')
+    perfilLeitor.innerHTML = `${perfil}`;
   }
 
 

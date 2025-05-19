@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz de Leitura</title>
   <link rel="stylesheet" href="../css/quizHabitos.css">
 </head>
+
 <body>
 
   <div id="inicio-container" style="display: block;">
@@ -24,13 +26,17 @@
   </div>
 
   <script>
+
+    var perfil = '';
+    var idQuizHabitos = 1;
+
     const listaDeQuestoes = [
       {
         pergunta: "Quantos livros você leu nos últimos 12 meses?",
         alternativaA: "Nenhum",
         alternativaB: "1 a 3 livros",
         alternativaC: "4 a 6 livros",
-        alternativaD: "Mais de 6 livros"
+        alternativaD: "Mais de 6 livros",
       },
       {
         pergunta: "Em média, quanto tempo você dedica à leitura por dia?",
@@ -62,7 +68,19 @@
       }
     ];
 
+    document.querySelectorAll(".alternativa").forEach(botao => {
+      botao.addEventListener("click", avancarQuestao);
+    });
+
+    document.getElementById("botao-iniciar").addEventListener("click", () => {
+      document.getElementById("inicio-container").style.display = "none";
+      document.getElementById("quiz-container").style.display = "block";
+      mostrarQuestao();
+    });
+
+
     let indiceAtual = 0;
+    let pontuacaoTotal = 0;
 
     function mostrarQuestao() {
       const questao = listaDeQuestoes[indiceAtual];
@@ -73,29 +91,83 @@
       document.getElementById("D").innerText = questao.alternativaD;
     }
 
-    function avancarQuestao() {
+    function definirPerfil(pontos) {
+      if (pontos <= 7) return "Leitor Iniciante";
+      else if (pontos <= 12) return "Leitor Intermediário";
+      else if (pontos <= 17) return "Leitor Avançado";
+      else return "Leitor dos Sonhos";
+    }
+
+    function avancarQuestao(event) {
+      const letras = ['A', 'B', 'C', 'D'];
+      const pontosPorAlternativa = [1, 2, 3, 4];
+
+      const letraEscolhida = event.target.id;
+
+      // For para encontrar o índice da alternativa clicada
+      let pontos = 0;
+      for (let i = 0; i < letras.length; i++) {
+        if (letraEscolhida == letras[i]) {
+          pontos = pontosPorAlternativa[i];
+          break;
+        }
+      }
+
+      pontuacaoTotal += pontos;
       indiceAtual++;
+
       if (indiceAtual < listaDeQuestoes.length) {
         mostrarQuestao();
       } else {
+        perfil = definirPerfil(pontuacaoTotal);
+        enviandoRespostas();
         document.getElementById("quiz-container").innerHTML = `
-          <h2>Obrigado por responder!</h2>
-          <p id="resultado">Suas respostas foram registradas. Continue cultivando bons hábitos de leitura!</p>
-          <a href="../dashboard/dashboard.html"><button>Voltar para a Dashboard</button></a>
-        `;
+      <h2>Obrigado por responder!</h2>
+      <p id="resultado">Seu perfil de leitura é: <strong>${perfil}</strong></p>
+      <p>Pontuação total: ${pontuacaoTotal}</p>
+      <a href="../dashboard/dashboard.html"><button>Voltar para a Dashboard</button></a>
+    `;
       }
     }
 
-    document.querySelectorAll(".alternativa").forEach(botao => {
-      botao.addEventListener("click", avancarQuestao);
-    });
+    function enviandoRespostas() {
+      var idUsuario = sessionStorage.ID_USUARIO;
+      console.log(sessionStorage.ID_USUARIO);
 
-    document.getElementById("botao-iniciar").addEventListener("click", () => {
-      document.getElementById("inicio-container").style.display = "none";
-      document.getElementById("quiz-container").style.display = "block";
-      mostrarQuestao();
-    });
+      var perfilLeitor = perfil;
+
+      fetch("/quiz/quizHabitos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          idUsuarioServer: idUsuario,
+          perfilLeitorServer: perfilLeitor,
+          idQuizHabitosServer: idQuizHabitos
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            alert("Pontuação Registrada com Sucesso!");
+            sessionStorage.PERFIL_LEITOR = perfilLeitor;
+            localStorage.setItem('perfilQuiz', perfil);
+            console.log(sessionStorage.PERFIL_LEITOR);
+          } else {
+            alert("Erro ao registrar sua pontuação");
+          }
+        })
+        .catch(function (erro) {
+          console.error("Erro na requisição: ", erro);
+          alert("Erro ao enviar a pontuação.");
+        });
+    }
+
+
   </script>
 
 </body>
+
 </html>

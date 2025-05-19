@@ -215,3 +215,8 @@
     color: var(--green-100);
     font-size: 2vw;
 }
+
+#b_perfil {
+      color: var(--green-100);
+      font-size: 1.5vw;
+    }
