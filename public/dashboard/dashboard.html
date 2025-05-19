@@ -62,8 +62,14 @@
     </nav>
 
     <div class="home">
-        <h1>Dashboard</h1>
+        <h1>Seja Bem-vindo(a) <span id="b_usuario">usuário</span>! </h1>
     </div>
     
 </body>
 </html>
+
+<script>
+
+b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+</script>

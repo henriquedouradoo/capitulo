@@ -110,5 +110,10 @@
 .home {
   margin-top: 1rem;
   font-family: var(--font-title);
-  margin-left: 5rem;
+  margin-left: 10rem;
+  font-size: 0.8vw;
+}
+
+#b_usuario {
+    color: var(--dark-100);
 }
