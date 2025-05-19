@@ -14,6 +14,16 @@ function finalizarJogo(pontuacao, idUsuario) {
     return database.executar(instrucaoSql, [pontuacao, idUsuario]);
 }
 
+function ultimaPontuacao(idUsuario) {
+    const instrucao = `
+    SELECT pontuacao, dtResposta FROM quizEnsinamentos WHERE fkUsuario = ${idUsuario};
+  `;
+
+    console.log('Executando a instrução SQL: \n' + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
-    finalizarJogo
+    finalizarJogo,
+    ultimaPontuacao
 };

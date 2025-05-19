@@ -210,3 +210,8 @@
     color: var(--white);
 
 }
+
+#b_pontos {
+    color: var(--green-100);
+    font-size: 2vw;
+}

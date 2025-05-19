@@ -25,7 +25,20 @@ function quizEnsinamentos(req, res) {
     }
 }
 
+function ultimaPontuacao(req, res) {
+	var idUsuario = req.params.idUsuario;
+
+	quizModel.ultimaPontuacao(idUsuario)
+		.then((resultado) => {
+			res.status(200).json(resultado);
+		})
+		.catch((erro) => {
+			res.status(500).json(erro.sqlMessage);
+		});
+}
+
 
 module.exports = {
-    quizEnsinamentos
+    quizEnsinamentos,
+    ultimaPontuacao
 }

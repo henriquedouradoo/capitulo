@@ -323,6 +323,8 @@
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
+        localStorage.setItem("pontuacaoUsuario", pontuacaoFinal);
+
         enviandoRespostas();
 
     }
@@ -330,6 +332,7 @@
     function enviandoRespostas() {
         var idUsuario = sessionStorage.ID_USUARIO;
         console.log(sessionStorage.ID_USUARIO);
+
         var pontuacaoUsuario = pontuacaoFinal;
 
         fetch("/quiz/quizEnsinamentos", {
@@ -347,7 +350,9 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+                alert("Pontuação Registrada com Sucesso!");
+                sessionStorage.ULTIMA_PONTUACAO = pontuacaoUsuario;
+                console.log(sessionStorage.ULTIMA_PONTUACAO);
             } else {
                 alert("Erro ao registrar sua pontuação");
             }
