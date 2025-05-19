@@ -38,13 +38,14 @@ foreign key (fkUsuario) references usuario(idUsuario)
 select * from quizHabito;
 
 create table quizEnsinamentos (
-idQuizEnsinamentos int,
+idQuizEnsinamentos int primary key auto_increment,
 pontuacao int,
 dtResposta datetime default current_timestamp,
 fkUsuario int,
-primary key (idQuizEnsinamentos, fkUsuario),
 foreign key (fkUsuario) references usuario(idUsuario)
 );
 
 select * from quizEnsinamentos;
+
+select * from usuario u join quizEnsinamentos q on q.fkUsuario = u.idUsuario;
 
