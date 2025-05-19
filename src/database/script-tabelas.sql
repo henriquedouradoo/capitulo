@@ -26,14 +26,25 @@ constraint fkVersiculoUsuario foreign key (pkUsuario) references usuario(idUsuar
 
 select * from versiculo;
 
-create table quiz (
-idQuiz int primary key auto_increment,
-pergunta int,
+create table quizHabito (
+idQuizHabito int,
 pontuacao int,
 dtResposta datetime default current_timestamp,
 fkUsuario int,
-constraint fkQuizUsuario foreign key (fkUsuario) references usuario(idUsuario)
+primary key (idQuizHabito, fkUsuario),
+foreign key (fkUsuario) references usuario(idUsuario)
 );
 
-select * from quiz;
+select * from quizHabito;
+
+create table quizEnsinamentos (
+idQuizEnsinamentos int,
+pontuacao int,
+dtResposta datetime default current_timestamp,
+fkUsuario int,
+primary key (idQuizEnsinamentos, fkUsuario),
+foreign key (fkUsuario) references usuario(idUsuario)
+);
+
+select * from quizEnsinamentos;
 
