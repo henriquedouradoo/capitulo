@@ -1,4 +1,4 @@
-# <img src="https://ibb.co/wrF2pY6h">
+# Capitulo
 
 **Capítulo** é uma plataforma web que visa promover o autoconhecimento e o desenvolvimento pessoal por meio da leitura da Bíblia Sagrada, mesmo fora de um contexto estritamente religioso. O projeto adota uma abordagem moderna, acessível e baseada em dados para estimular hábitos de leitura e reflexão pessoal.  
 <br>
@@ -21,7 +21,7 @@ A Bíblia é uma fonte rica de ensinamentos com aplicações na vida pessoal, pr
 
 ### Plataforma Web
 <br>
-<img src="./prints/home.png">
+
 <br>
 
 ### Página de Cadastro
