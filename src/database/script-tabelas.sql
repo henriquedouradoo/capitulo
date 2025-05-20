@@ -27,11 +27,10 @@ constraint fkVersiculoUsuario foreign key (pkUsuario) references usuario(idUsuar
 select * from versiculo;
 
 create table quizHabito (
-idQuizHabito int,
-pontuacao int,
+idQuizHabito int primary key auto_increment,
+perfil varchar(50),
 dtResposta datetime default current_timestamp,
 fkUsuario int,
-primary key (idQuizHabito, fkUsuario),
 foreign key (fkUsuario) references usuario(idUsuario)
 );
 

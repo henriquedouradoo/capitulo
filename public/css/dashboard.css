@@ -118,3 +118,70 @@
     color: var(--dark-100);
 }
 
+.kpis {
+    display: flex;
+    width: 100%;
+    gap: 4.2rem;
+
+    margin-left: 10rem;
+
+}
+
+.kpi1 {
+    background-color: var(--green-100);
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.kpi2 {
+    background-color: var(--green-100);
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.kpi3 {
+    background-color: var(--green-100);
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.kpi4 {
+    background-color: var(--green-100);
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.graficos {
+    display: flex;
+    width: 100%;
+
+    margin-left: 9rem;
+}
+
+.grafico1 {
+    width: 40%;
+}
