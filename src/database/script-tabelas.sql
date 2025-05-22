@@ -48,3 +48,5 @@ select * from quizEnsinamentos;
 
 select * from usuario u join quizEnsinamentos q on q.fkUsuario = u.idUsuario;
 
+SELECT u.nome, q.pontuacao, q.dtResposta FROM quizEnsinamentos q JOIN usuario u on q.fkUsuario = u.idUsuario;
+
