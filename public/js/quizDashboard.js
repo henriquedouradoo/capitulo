@@ -19,7 +19,7 @@ b_qtd.innerHTML = `${contador}`;
 
 function quizEnsinamentos() {
   contador++;
-  localStorage.setItem('contadorQuiz', contador)
+  localStorage.setItem("contadorQuiz", contador);
   b_qtd.innerHTML = `${contador}`;
   alert("Direcionando para seu Quiz!");
   setTimeout(() => {
@@ -29,10 +29,16 @@ function quizEnsinamentos() {
 
 function quizLeitura() {
   contador++;
-  localStorage.setItem('contadorQuiz', contador)
+  localStorage.setItem("contadorQuiz", contador);
   b_qtd.innerHTML = `${contador}`;
   alert("Direcionando para seu Quiz!");
   setTimeout(() => {
     window.location = "/quiz/quizHabitos.html";
   }, 500);
+}
+
+function logout() {
+  sessionStorage.clear();
+  localStorage.clear();
+  window.location = "../index.html";
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Capítulo</title>
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -46,7 +48,7 @@
         </ul>
 
         <div class="btn-navbar">
-            <a href="../index.html"><button class="login">Sair -></button></a>
+            <button class="login" onclick="logout()">Sair -></button>
             <button class="notificacao">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -86,34 +88,41 @@
             <canvas id="myChart"></canvas>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 
-b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-const ctx = document.getElementById('myChart');
+    const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['10/05', '11/05', '12/05', '13/05', '14/05', '15/05'],
-      datasets: [{
-        label: 'Maiores Pontuações nos Últimos Dias',
-        data: [5, 2, 5, 3, 4, 1],
-        borderWidth: 1,
-        backgroundColor: 'black'
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['10/05', '11/05', '12/05', '13/05', '14/05', '15/05'],
+            datasets: [{
+                label: 'Maiores Pontuações nos Últimos Dias',
+                data: [5, 2, 5, 3, 4, 1],
+                borderWidth: 1,
+                backgroundColor: 'black'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
-      }
+    });
+
+    function logout() {
+        sessionStorage.clear();
+        localStorage.clear();
+        window.location = "../index.html";
     }
-  });
 
 </script>
