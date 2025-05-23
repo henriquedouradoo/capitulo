@@ -12,8 +12,8 @@ router.post("/quizHabitos", (req, res) => {
     quizController.quizHabitos(req, res);
 });
 
-router.get('/ultimaPontuacao/:idUsuario', (req, res) => {
-  quizController.ultimaPontuacao(req, res);
-});
+// router.get('/ultimaPontuacao/:idUsuario', (req, res) => {
+//   quizController.ultimaPontuacao(req, res);
+// });
 
 module.exports = router;

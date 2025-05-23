@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 
-<body>
+<body onload="dadosDashboard()">
 
     <nav class="navbar">
         <div class="logo">
@@ -89,40 +89,9 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dashboard.js"></script>
+
 </body>
 
 </html>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['10/05', '11/05', '12/05', '13/05', '14/05', '15/05'],
-            datasets: [{
-                label: 'Maiores Pontuações nos Últimos Dias',
-                data: [5, 2, 5, 3, 4, 1],
-                borderWidth: 1,
-                backgroundColor: 'black'
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    function logout() {
-        sessionStorage.clear();
-        localStorage.clear();
-        window.location = "../index.html";
-    }
-
-</script>

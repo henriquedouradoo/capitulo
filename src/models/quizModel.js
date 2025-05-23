@@ -14,14 +14,14 @@ function finalizarJogo(pontuacao, idUsuario) {
     return database.executar(instrucaoSql, [pontuacao, idUsuario]);
 }
 
-function ultimaPontuacao(idUsuario) {
-    const instrucao = `
-    SELECT pontuacao, dtResposta FROM quizEnsinamentos WHERE fkUsuario = ${idUsuario};
-  `;
+// function ultimaPontuacao(idUsuario) {
+//     const instrucao = `
+//     SELECT pontuacao, dtResposta FROM quizEnsinamentos WHERE fkUsuario = ${idUsuario};
+//   `;
 
-    console.log('Executando a instrução SQL: \n' + instrucao);
-    return database.executar(instrucao);
-}
+//     console.log('Executando a instrução SQL: \n' + instrucao);
+//     return database.executar(instrucao);
+// }
 
 function perfilQuiz(perfilLeitor, idUsuario) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function quizHabitos():", perfilLeitor, idUsuario);
@@ -40,6 +40,6 @@ function perfilQuiz(perfilLeitor, idUsuario) {
 
 module.exports = {
     finalizarJogo,
-    ultimaPontuacao,
+    // ultimaPontuacao,
     perfilQuiz
 };

@@ -24,18 +24,18 @@ function quizEnsinamentos(req, res) {
   }
 }
 
-function ultimaPontuacao(req, res) {
-  var idUsuario = req.params.idUsuario;
+// function ultimaPontuacao(req, res) {
+//   var idUsuario = req.params.idUsuario;
 
-  quizModel
-    .ultimaPontuacao(idUsuario)
-    .then((resultado) => {
-      res.status(200).json(resultado);
-    })
-    .catch((erro) => {
-      res.status(500).json(erro.sqlMessage);
-    });
-}
+//   quizModel
+//     .ultimaPontuacao(idUsuario)
+//     .then((resultado) => {
+//       res.status(200).json(resultado);
+//     })
+//     .catch((erro) => {
+//       res.status(500).json(erro.sqlMessage);
+//     });
+// }
 
 function quizHabitos(req, res) {
   var idUsuario = req.body.idUsuarioServer;
@@ -63,6 +63,6 @@ function quizHabitos(req, res) {
 
 module.exports = {
   quizEnsinamentos,
-  ultimaPontuacao,
-  quizHabitos,
+  // ultimaPontuacao,
+  quizHabitos
 };
