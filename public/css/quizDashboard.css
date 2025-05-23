@@ -144,6 +144,7 @@
 
 .card1 {
   background-color: var(--green-100);
+  border-radius: 8px;
   width: 87%;
   height: 10vh;
 
@@ -156,6 +157,7 @@
 
 .card2 {
   background-color: var(--green-100);
+  border-radius: 8px;
   width: 87%;
   height: 10vh;
 
@@ -174,6 +176,7 @@
 
 .metrica1 {
   background-color: #1f1f1f;
+  border-radius: 8px;
   width: 24.6rem;
   height: 170px;
 
@@ -186,6 +189,7 @@
 
 .metrica2 {
   background-color: #1f1f1f;
+  border-radius: 8px;
   width: 24.6rem;
   height: 170px;
 
@@ -198,6 +202,7 @@
 
 .metrica3 {
   background-color: #1f1f1f;
+  border-radius: 8px;
   width: 24.6rem;
   height: 170px;
 

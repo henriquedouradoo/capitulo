@@ -134,6 +134,7 @@
 
 .kpi1 {
     background-color: var(--green-100);
+    border-radius: 8px;
     width: 250px;
     height: 150px;
 
@@ -146,6 +147,7 @@
 
 .kpi2 {
     background-color: var(--green-100);
+    border-radius: 8px;
     width: 250px;
     height: 150px;
 
@@ -158,6 +160,7 @@
 
 .kpi3 {
     background-color: var(--green-100);
+    border-radius: 8px;
     width: 250px;
     height: 150px;
 
@@ -170,6 +173,7 @@
 
 .kpi4 {
     background-color: var(--green-100);
+    border-radius: 8px;
     width: 250px;
     height: 150px;
 

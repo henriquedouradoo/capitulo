@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Capítulo</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/ensinamentos.css">
 </head>
 
 <body>
@@ -64,20 +64,19 @@
     </nav>
 
     <div class="home">
-        <h1>Ensinamentos</h1>
+        <div class="title">
+        <h1>Aprendendo com Passagens Bíblicas</h1>
+        </div>
+
+        <div class="container">
+            <div class="versiculo" id="versiculo"></div>
+
+            <div class="contentIA">
+                <h3>Explicação com Inteligência Artificial Generativa: </h3>
+            </div>
+        </div>
+
     </div>
-
+    <script src="../js/versiculoDashboard.js"></script>
 </body>
-
 </html>
-
-<script>
-
-    function logout() {
-        sessionStorage.clear();
-        localStorage.clear();
-        window.location = "../index.html";
-    }
-
-
-</script>
