@@ -50,3 +50,12 @@ select * from usuario u join quizEnsinamentos q on q.fkUsuario = u.idUsuario;
 
 SELECT u.nome, q.pontuacao, q.dtResposta FROM quizEnsinamentos q JOIN usuario u on q.fkUsuario = u.idUsuario;
 
+select qe.pontuacao AS "Última Pontuação", qe.dtResposta AS "Data de Resposta" from quizEnsinamentos qe JOIN usuario u ON u.idUsuario = qe.fkUsuario;
+
+SELECT 
+  qe.pontuacao,
+  qe.dtResposta
+FROM quizEnsinamentos qe JOIN usuario u ON u.idUsuario = qe.fkUsuario
+WHERE qe.fkUsuario = u.idUsuario -- você coloca aqui o ID do usuário logado
+ORDER BY qe.dtResposta DESC
+LIMIT 1;

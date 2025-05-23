@@ -11,13 +11,16 @@
 }
 
 ::-webkit-scrollbar{
-    border-radius: 1px;
-    width: 1px;
-    background-color: var(--dark-100);
+    border-radius: 10px;
+    width: 3px;
+    height: 1px;
+    background-color: var(--green-100);
   }
 
   ::-webkit-scrollbar-thumb{
     background: var(--dark-100);
+    width: 2px;
+    height: 1px;
     border-radius: 8px;
   }
 
