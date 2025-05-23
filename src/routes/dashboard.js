@@ -7,4 +7,8 @@ router.get("/ultimaPontuacao", function (req, res) {
     dashboardController.ultimaPontuacao(req, res);
 });
 
+router.get("/perfilLeitor", function (req, res) {
+    dashboardController.perfilLeitor(req, res);
+});
+
 module.exports = router;

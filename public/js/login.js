@@ -44,7 +44,7 @@
                     sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        window.location = "./quiz/quizEnsinamentos.html";
+                        window.location = "./dashboard/quiz.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
