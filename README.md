@@ -89,6 +89,24 @@ cd capitulo
 npm install
 ```
 
+### 4. Configurar o .ENV
+```
+AMBIENTE_PROCESSO=desenvolvimento
+
+# Configurações de conexão com o banco de dados
+DB_HOST=localhost
+DB_DATABASE='DATABASE'
+DB_USER='USER'
+DB_PASSWORD='PASSWORD'
+DB_PORT=3306
+
+# Configurações do servidor de aplicação
+APP_PORT=3333
+APP_HOST=localhost
+
+MINHA_CHAVE='CHAVE'
+```
+
 ### 4. Iniciando projeto
 ```bash
 npm start
