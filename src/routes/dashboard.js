@@ -11,4 +11,9 @@ router.get("/perfilLeitor", function (req, res) {
     dashboardController.perfilLeitor(req, res);
 });
 
+
+// router.post("/perguntar", function (req, res) {
+//     iaController.gerarResposta(req, res);
+// })
+
 module.exports = router;

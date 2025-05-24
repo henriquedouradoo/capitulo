@@ -53,7 +53,7 @@ function dadosDashboard() {
           datasets: [
             {
               data: [pontosCorretos, pontosErrados],
-              backgroundColor: ["#99ea48", "#1F1F1F"],
+              backgroundColor: ["#888", "#1F1F1F"],
               borderWidth: 1,
             },
           ],
@@ -63,10 +63,14 @@ function dadosDashboard() {
           plugins: {
             legend: {
               position: "bottom",
+              labels: {
+                color: "#000",
+              },
             },
             title: {
               display: true,
               text: `Última Pontuação do Quiz (${dataFormatada})`,
+              color: "#000"
             },
           },
         },
