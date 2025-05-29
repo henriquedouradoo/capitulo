@@ -83,8 +83,9 @@ function dadosDashboard() {
   fetch(`/interacao/anotacoesdia/${idUsuario}`)
     .then((res) => res.json())
     .then((dados) => {
-      const labels = dados.map((item) => item.dia);
-      const valores = dados.map((item) => item.total);
+      const ultimosDados = dados.reverse();
+      const labels = ultimosDados.map((item) => item.dia);
+      const valores = ultimosDados.map((item) => item.total);
 
       const ctx = document.getElementById("graficoAnotacoes").getContext("2d");
 
@@ -121,7 +122,7 @@ function dadosDashboard() {
             },
             title: {
               display: true,
-              text: "Anotações por Dia",
+              text: "Anotações por Dia (Últimos Três Dias)",
               color: "#000",
             },
           },

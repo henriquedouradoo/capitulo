@@ -33,7 +33,7 @@ function anotacoesPorDia(idUsuario) {
       AND anotacao IS NOT NULL
       AND anotacao != ''
     GROUP BY dia
-    ORDER BY dia;
+    ORDER BY dia DESC LIMIT 3;
   `;
 
   console.log("Executando SQL:", instrucaoSql);

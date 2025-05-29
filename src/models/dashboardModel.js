@@ -18,7 +18,7 @@ function ultimaPontuacao(idUsuario) {
 function perfilLeitor(idUsuario) {
   var instrucaoSql = `
     SELECT u.dtCadastro, qh.perfil, qh.dtResposta FROM quizHabito qh JOIN usuario u ON u.idUsuario = qh.fkUsuario 
-WHERE qh.fkUsuario = ${idUsuario} ORDER BY qh.dtResposta DESC LIMIT 1;
+    WHERE qh.fkUsuario = ${idUsuario} ORDER BY qh.dtResposta DESC LIMIT 1;
   `;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
