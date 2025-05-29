@@ -143,6 +143,8 @@
     font-family: var(--font-title);
     justify-content: center;
     display: flex;
+
+    transition: all 0.4s ease;
 }
 
 .kpi2 {
@@ -200,11 +202,11 @@
     margin-top: 1rem;
     padding: 1rem;
     background-color: var(--green-100);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .grafico1:hover {
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
 }
 
 #b_conta {

@@ -65,7 +65,7 @@
 
     <div class="home">
         <div class="title">
-        <h1>Aprendendo com Passagens Bíblicas</h1>
+            <h1>Aprendendo com Passagens Bíblicas</h1>
         </div>
 
         <div class="container">
@@ -78,27 +78,27 @@
 
             <div class="interacao">
                 <h2>Que tipo de Interação você teve com esse Versículo?</h2>
-            <div class="btnsInteracao">
-                <input type="radio" name="opcao" id="visualizado" value="visualizado">
-                <label for="">Visualizado</label>
-                
-                <input type="radio" name="opcao" id="lido" value="lido">
-                <label for="">Lido</label>
-                
-                <input type="radio" name="opcao" id="refletido" value="refletido">
-                <label for="">Refletido</label>
-                
-                
-            </div>
+                <div class="btnsInteracao">
+                    <input type="radio" name="opcao" id="visualizado" value="visualizado">
+                    <label for="">Visualizado</label>
+
+                    <input type="radio" name="opcao" id="favoritado" value="favoritado">
+                    <label for="">Favoritado</label>
+
+                    <input type="radio" name="opcao" id="refletido" value="refletido">
+                    <label for="">Refletido</label>
+
+
+                </div>
             </div>
 
             <div class="anotacoes">
                 <div class="mensagem">
-                <h3>Anote seu aprendizado: </h3>
-                <textarea name="anotacao" id="anotacao"></textarea>
+                    <h3>Anote seu aprendizado: </h3>
+                    <textarea name="anotacao" id="anotacaoText"></textarea>
                 </div>
                 <div class="enviar">
-                <button>Criar Anotação</button>
+                    <button onclick="anotacao()">Criar Anotação</button>
                 </div>
             </div>
         </div>
@@ -106,4 +106,5 @@
     </div>
     <script src="../js/versiculoDashboard.js"></script>
 </body>
+
 </html>
