@@ -12,19 +12,17 @@ dtCadastro datetime default current_timestamp
 
 select * from usuario;
 
-create table versiculo (
-idVersiculo int,
-livro varchar(45) not null,
-versiculo int not null,
+create table interacaoVersiculo (
+idInteracaoVersiculo int primary key auto_increment,
+referencia varchar(50),
 interacao varchar(20) not null,
 constraint tipoInteracao check(interacao in('visualizado', 'favoritado', 'refletido')),
 dtInteracao datetime default current_timestamp,
-pkUsuario int,
-constraint pkVersiculo primary key (idVersiculo, pkUsuario),
-constraint fkVersiculoUsuario foreign key (pkUsuario) references usuario(idUsuario)
+fkUsuario int,
+foreign key (fkUsuario) references usuario(idUsuario)
 );
 
-select * from versiculo;
+select * from interacaoVersiculo;
 
 create table quizHabito (
 idQuizHabito int primary key auto_increment,
@@ -48,8 +46,6 @@ select * from quizEnsinamentos;
 
 select * from usuario u join quizEnsinamentos q on q.fkUsuario = u.idUsuario;
 
-SELECT u.nome, q.pontuacao, q.dtResposta FROM quizEnsinamentos q JOIN usuario u on q.fkUsuario = u.idUsuario;
-
 select qe.pontuacao AS "Última Pontuação", qe.dtResposta AS "Data de Resposta" from quizEnsinamentos qe JOIN usuario u ON u.idUsuario = qe.fkUsuario;
 
 SELECT 
@@ -59,3 +55,6 @@ FROM quizEnsinamentos qe JOIN usuario u ON u.idUsuario = qe.fkUsuario
 WHERE qe.fkUsuario = u.idUsuario -- você coloca aqui o ID do usuário logado
 ORDER BY qe.dtResposta DESC
 LIMIT 1;
+
+SELECT qh.perfil, qh.dtResposta FROM quizHabito qh JOIN usuario u ON u.idUsuario = qh.fkUsuario 
+WHERE qh.fkUsuario = u.idUsuario ORDER BY qh.dtResposta DESC LIMIT 1;
