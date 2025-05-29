@@ -49,6 +49,8 @@ let localizacaoAtual = "";
           alert("Anotação registrada com sucesso!");
           document.getElementById("anotacaoText").value = "";
           document.querySelector('input[name="opcao"]:checked').checked = false;
+
+          window.location = '../dashboard/dashboard.html'
         } else {
           alert("Erro ao registrar a anotação.");
         }

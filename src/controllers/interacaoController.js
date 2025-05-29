@@ -28,6 +28,20 @@ function interacaoVersiculo(req, res) {
   }
 }
 
+function totalAnotacao(req, res) {
+  var idUsuario = req.params.idUsuario;
+
+  interacaoModel.totalAnotacao(idUsuario)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
-  interacaoVersiculo
+  interacaoVersiculo,
+  totalAnotacao
 };

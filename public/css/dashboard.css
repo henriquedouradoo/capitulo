@@ -218,3 +218,8 @@
     color: white;
     background-color: var(--dark-100);
 }
+
+#anotacao_total {
+    background-color: var(--dark-100);
+    color: white;
+}

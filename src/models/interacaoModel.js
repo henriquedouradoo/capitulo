@@ -14,6 +14,17 @@ function interacaoVersiculo(idUsuario, anotacao, status, localizacao) {
     return database.executar(instrucaoSql, [idUsuario, anotacao, status, localizacao]);
 }
 
+function totalAnotacao(idUsuario) {
+  var instrucaoSql = `
+    select COUNT(iv.anotacao) as Total from interacaoVersiculo iv 
+    WHERE iv.fkUsuario = ${idUsuario};
+  `;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    interacaoVersiculo
+    interacaoVersiculo,
+    totalAnotacao
 };

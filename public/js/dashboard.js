@@ -105,4 +105,19 @@ function dadosDashboard() {
     .catch((error) => {
       console.error(error);
     });
+
+
+
+     fetch(`/interacao/total/${idUsuario}`)
+    .then((resposta) => resposta.json())
+    .then((dados) => {
+      const total = dados[0].Total;
+      anotacao_total.innerHTML = `${total}`;
+    })
+    .catch((erro) => {
+      console.error("Erro ao carregar total de anotações:", erro);
+    });
+    
 }
+
+
