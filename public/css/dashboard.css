@@ -191,6 +191,7 @@
     width: 100%;
 
     margin-left: 10rem;
+    gap: 3rem;
 }
 
 .grafico1 {
@@ -207,6 +208,27 @@
 
 .grafico1:hover {
     margin-top: 0.8rem;
+}
+
+.grafico2 {
+    width: 41.5%;
+    border: 1px solid var(--green-100);
+    border-radius: 12px;
+    height: 65vh;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--green-100);
+    transition: all 0.3s ease;
+}
+
+.grafico2:hover {
+    margin-top: 0.8rem;
+}
+
+#graficoAnotacoes {
+    margin-top: 3rem;
+    font-weight: bold;
 }
 
 #b_conta {

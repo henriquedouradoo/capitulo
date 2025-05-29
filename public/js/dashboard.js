@@ -53,7 +53,7 @@ function dadosDashboard() {
           datasets: [
             {
               data: [pontosCorretos, pontosErrados],
-              backgroundColor: ["#888", "#1F1F1F"],
+              backgroundColor: ["#fff", "#000"],
               borderWidth: 1,
             },
           ],
@@ -100,7 +100,7 @@ function dadosDashboard() {
             {
               label: "Anotações por Dia",
               data: valores,
-              backgroundColor: "#888",
+              backgroundColor: "#fff",
               borderWidth: 1,
             },
           ],
