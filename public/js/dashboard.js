@@ -70,7 +70,7 @@ function dadosDashboard() {
             title: {
               display: true,
               text: `Última Pontuação do Quiz (${dataFormatada})`,
-              color: "#000"
+              color: "#000",
             },
           },
         },
@@ -79,6 +79,61 @@ function dadosDashboard() {
     .catch((error) => {
       console.error(error);
     });
+
+  fetch(`/interacao/anotacoesdia/${idUsuario}`)
+    .then((res) => res.json())
+    .then((dados) => {
+      const labels = dados.map((item) => item.dia);
+      const valores = dados.map((item) => item.total);
+
+      const ctx = document.getElementById("graficoAnotacoes").getContext("2d");
+
+      if (window.graficoAnotacoes instanceof Chart) {
+        window.graficoAnotacoes.destroy();
+      }
+
+      window.graficoAnotacoes = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "Anotações por Dia",
+              data: valores,
+              backgroundColor: "#888",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { color: "#000" },
+            },
+            x: {
+              ticks: { color: "#000" },
+            },
+          },
+          plugins: {
+            legend: {
+              labels: { color: "#000" },
+            },
+            title: {
+              display: true,
+              text: "Anotações por Dia",
+              color: "#000",
+            },
+          },
+        },
+      });
+    })
+    .catch((erro) => {
+      console.error("Erro ao gerar gráfico de anotações por dia:", erro);
+    });
+
+
+    
 
   fetch(`/dashboard/perfilLeitor?idUsuario=${idUsuario}`, { cache: "no-store" })
     .then((response) => {
@@ -106,9 +161,7 @@ function dadosDashboard() {
       console.error(error);
     });
 
-
-
-     fetch(`/interacao/total/${idUsuario}`)
+  fetch(`/interacao/total/${idUsuario}`)
     .then((resposta) => resposta.json())
     .then((dados) => {
       const total = dados[0].Total;
@@ -117,7 +170,4 @@ function dadosDashboard() {
     .catch((erro) => {
       console.error("Erro ao carregar total de anotações:", erro);
     });
-    
 }
-
-

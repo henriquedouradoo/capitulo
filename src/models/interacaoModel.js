@@ -24,7 +24,25 @@ function totalAnotacao(idUsuario) {
   return database.executar(instrucaoSql);
 }
 
+
+function anotacoesPorDia(idUsuario) {
+  const instrucaoSql = `
+    SELECT DATE_FORMAT(dtInteracao, '%d/%m') AS dia, COUNT(*) AS total
+    FROM interacaoVersiculo
+    WHERE fkUsuario = ${idUsuario}
+      AND anotacao IS NOT NULL
+      AND anotacao != ''
+    GROUP BY dia
+    ORDER BY dia;
+  `;
+
+  console.log("Executando SQL:", instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+
 module.exports = {
     interacaoVersiculo,
-    totalAnotacao
+    totalAnotacao,
+    anotacoesPorDia
 };

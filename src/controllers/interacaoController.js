@@ -41,7 +41,21 @@ function totalAnotacao(req, res) {
     });
 }
 
+function anotacoesPorDia(req, res) {
+  const idUsuario = req.params.idUsuario;
+
+  interacaoModel.anotacoesPorDia(idUsuario)
+    .then((resultado) => {
+      res.json(resultado);
+    })
+    .catch((erro) => {
+      console.log("Erro ao buscar anotações por dia:", erro);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
   interacaoVersiculo,
-  totalAnotacao
+  totalAnotacao,
+  anotacoesPorDia
 };
