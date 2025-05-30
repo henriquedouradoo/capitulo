@@ -66,9 +66,22 @@ function contagemInteracoesPorTipo(req, res) {
     });
 }
 
+
+function frequenciaInteracao(req, res) {
+  const idUsuario = req.params.idUsuario;
+
+  interacaoModel.frequenciaInteracao(idUsuario)
+    .then((resultado) => res.json(resultado))
+    .catch((erro) => {
+      console.error("Erro ao buscar interações:", erro);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
   interacaoVersiculo,
   totalAnotacao,
   anotacoesPorDia,
-  contagemInteracoesPorTipo
+  contagemInteracoesPorTipo,
+  frequenciaInteracao
 };

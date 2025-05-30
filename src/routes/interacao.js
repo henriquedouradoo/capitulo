@@ -19,4 +19,8 @@ router.get("/interacoestotal/:idUsuario", function (req, res) {
   interacaoController.contagemInteracoesPorTipo(req, res);
 });
 
+router.get("/interacaofrequente/:idUsuario", function (req, res) {
+  interacaoController.frequenciaInteracao(req, res);
+}); 
+
 module.exports = router;
