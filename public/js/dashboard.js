@@ -134,6 +134,59 @@ function dadosDashboard() {
     });
 
 
+
+    fetch(`/interacao/interacoestotal/${idUsuario}`)
+  .then(res => res.json())
+  .then(dados => {
+    const labels = dados.map(item => item.tipo);
+    const valores = dados.map(item => item.total);
+
+    const ctx = document.getElementById("graficoInteracoes").getContext("2d");
+
+    if (window.graficoInteracoes instanceof Chart) {
+      window.graficoInteracoes.destroy();
+    }
+
+    window.graficoInteracoes = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "Total por Interação",
+          data: valores,
+          backgroundColor: ["#fff", "#fff", "#fff"],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { color: "#1F1F1F" }
+          },
+          x: {
+            ticks: { color: "#1F1F1F" }
+          }
+        },
+        grid: {
+          color: "#1F1F1F"
+        },
+        plugins: {
+          legend: {
+            labels: { color: "#1F1F1F" }
+          },
+          title: {
+            display: true,
+            text: "Frequência de Cada Interação",
+            color: "#1F1F1F  "
+          }
+        }
+      }
+    });
+  })
+  .catch(erro => {
+    console.error("Erro ao carregar gráfico de interações:", erro);
+  });
     
 
   fetch(`/dashboard/perfilLeitor?idUsuario=${idUsuario}`, { cache: "no-store" })

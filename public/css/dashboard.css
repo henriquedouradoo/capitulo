@@ -226,6 +226,35 @@
     margin-top: 0.8rem;
 }
 
+.graficoEnd {
+    width: 100%;
+
+    margin-left: 10rem;
+    gap: 3rem;
+}
+
+.graficoInteracao {
+    width: 77%;
+    height: 30vh;
+    background-color: var(--green-100);
+
+    border: 1px solid var(--green-100);
+    color: white;
+    border-radius: 12px;
+    height: 65vh;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+#graficoInteracoes {
+    text-align: center;
+    align-items: center;
+    margin-left: 7rem;
+    color: white;
+}
+
 #graficoAnotacoes {
     margin-top: 3rem;
     font-weight: bold;
@@ -242,6 +271,6 @@
 }
 
 #anotacao_total {
-    background-color: var(--dark-100);
     color: white;
+    background-color: var(--dark-100);
 }

@@ -15,4 +15,8 @@ router.get("/anotacoesdia/:idUsuario", function (req, res) {
   interacaoController.anotacoesPorDia(req, res);
 });
 
+router.get("/interacoestotal/:idUsuario", function (req, res) {
+  interacaoController.contagemInteracoesPorTipo(req, res);
+});
+
 module.exports = router;

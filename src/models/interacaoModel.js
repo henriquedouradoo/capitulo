@@ -41,8 +41,19 @@ function anotacoesPorDia(idUsuario) {
 }
 
 
+function contagemInteracoesPorTipo(idUsuario) {
+  const instrucaoSql = `
+    SELECT interacao AS tipo, COUNT(*) AS total
+    FROM interacaoVersiculo
+    WHERE fkUsuario = ${idUsuario}
+    GROUP BY interacao;
+  `;
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
     interacaoVersiculo,
     totalAnotacao,
-    anotacoesPorDia
+    anotacoesPorDia,
+    contagemInteracoesPorTipo
 };
