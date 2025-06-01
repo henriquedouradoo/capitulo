@@ -104,7 +104,7 @@
 }
 
 .btn-navbar .login:hover {
-    background-color: var(--green-100);
+    background-color: white;
     color: black;
 }
 
@@ -201,6 +201,7 @@
     padding: 1rem;
     background-color: var(--green-100);
     transition: all 0.3s ease;
+    overflow-y: hidden;
 }
 
 .grafico1:hover {
@@ -222,7 +223,7 @@
 
 #myChart {
    text-align: center;
-   margin-left: 4rem;
+   margin-left: 3rem;
    display: flex;
 }
 
