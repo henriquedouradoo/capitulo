@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-around;
     padding: 1.5rem;
-
+    margin-left: -2rem;
     position: fixed;
     background: white;
     width: 100%;
