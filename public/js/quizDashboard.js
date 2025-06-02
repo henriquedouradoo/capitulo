@@ -1,4 +1,7 @@
 var idUsuario = sessionStorage.ID_USUARIO;
+var nomeUsuario = sessionStorage.NOME_USUARIO;
+
+b_usuario.innerHTML = `${nomeUsuario}`
 
 fetch(`/dashboard/perfilLeitor?idUsuario=${idUsuario}`, { cache: 'no-store' })
     .then(response => {

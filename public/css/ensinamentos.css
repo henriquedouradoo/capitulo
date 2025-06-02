@@ -131,6 +131,7 @@
     margin-top: 0.5rem;
     
     border-radius: 8px;
+    overflow-y: hidden;
 }
 
 .versiculo {
