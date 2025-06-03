@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Capítulo</title>
-    <link rel="stylesheet" href="../css/ensinamentosT.css">
+    <link rel="stylesheet" href="../css/perfil.css">
 </head>
 
 <body>
@@ -58,7 +58,28 @@
 
     <div class="home">
         <h1>Seu Perfil</h1>
+
+        <div class="infos">
+            <p>E-mail: <span id="b_email">E-mail</span></p>
+            <p>Nome: <span id="b_nome">Nome</span></p>
+            <p>Sobrenome: <span id="b_sobrenome">Sobrenome</span></p>
+            <p>Senha: <span id="b_senha">Senha</span></p>
+        </div>
     </div>
 
 </body>
 </html>
+
+<script>
+
+var email = sessionStorage.EMAIL_USUARIO;
+var nome = sessionStorage.NOME_USUARIO;
+var sobrenome = sessionStorage.SOBRENOME_USUARIO;
+var senha = sessionStorage.SENHA_USUARIO;
+
+b_email.innerHTML = `${email}`
+b_nome.innerHTML = `${nome}`
+b_sobrenome.innerHTML = `${sobrenome}`
+b_senha.innerHTML = `${senha}`
+
+</script>

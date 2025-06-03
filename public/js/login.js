@@ -42,6 +42,8 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.SOBRENOME_USUARIO = json.sobrenome;
+                    sessionStorage.SENHA_USUARIO = json.senha;
 
                     setTimeout(function () {
                         window.location = "./dashboard/quiz.html";
