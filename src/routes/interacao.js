@@ -23,4 +23,8 @@ router.get("/interacaofrequente/:idUsuario", function (req, res) {
   interacaoController.frequenciaInteracao(req, res);
 }); 
 
+router.get("/listarAnotacoes/:idUsuario", function (req, res) {
+  interacaoController.listarAnotacoes(req, res);
+}); 
+
 module.exports = router;

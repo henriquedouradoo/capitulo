@@ -37,13 +37,19 @@ function totalAnotacao(idUsuario) {
 
 function anotacoesPorDia(idUsuario) {
   const instrucaoSql = `
-    SELECT DATE_FORMAT(dtInteracao, '%d/%m') AS dia, COUNT(*) AS total
-    FROM interacaoVersiculo
-    WHERE fkUsuario = ${idUsuario}
-      AND anotacao IS NOT NULL
-      AND anotacao != ''
-    GROUP BY dia
-    ORDER BY dia DESC LIMIT 3;
+      SELECT 
+      DATE_FORMAT(data_interacao, '%d/%m') AS dia,
+      COUNT(*) AS total
+    FROM (
+      SELECT DATE(dtInteracao) AS data_interacao
+      FROM interacaoVersiculo
+      WHERE fkUsuario = ${idUsuario}
+        AND anotacao IS NOT NULL
+        AND anotacao != ''
+    ) AS sub
+    GROUP BY data_interacao
+    ORDER BY data_interacao DESC
+    LIMIT 3;
   `;
 
   console.log("Executando SQL:", instrucaoSql);
@@ -72,10 +78,19 @@ function frequenciaInteracao(idUsuario) {
   return database.executar(instrucaoSql);
 }
 
+function listarAnotacoes(idUsuario) {
+  const instrucaoSql = `
+  Select iv.interacao as tipo, iv.referencia, iv.anotacao,
+   iv.dtInteracao as dataInteracao from interacaoVersiculo iv WHERE fkUsuario = ${idUsuario}; 
+  `;
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
   interacaoVersiculo,
   totalAnotacao,
   anotacoesPorDia,
   contagemInteracoesPorTipo,
-  frequenciaInteracao
+  frequenciaInteracao,
+  listarAnotacoes
 };

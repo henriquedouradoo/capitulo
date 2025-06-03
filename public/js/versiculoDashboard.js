@@ -61,6 +61,34 @@ let localizacaoAtual = "";
       });
   }
 
+
+  function listar() {
+
+     fetch(`/interacao/listarAnotacoes/${idUsuario}`, { cache: "no-store" })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error("Erro ao buscar dados");
+    })
+
+    .then((dados) => {
+      console.log("Última pontuação:", dados);
+
+      referencia.innerHTML = `${dados.referencia}`;
+
+      interacao.innerHTML = `${dados.interacao}`;
+
+      msg.innerHTML = `${dados.anotacao}`
+
+      dataInteracao.innerHTML = `${dados.dataInteracao}`;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
+  }
+
   function logout() {
     sessionStorage.clear();
     localStorage.clear();

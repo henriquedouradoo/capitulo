@@ -26,7 +26,6 @@ function dadosDashboard() {
     .then((dados) => {
       console.log("Última pontuação:", dados);
 
-      // formatando a data para formato DD/MM
       let dataFormatada = new Date(dados.dtResposta).toLocaleDateString(
         "pt-BR",
         {
@@ -84,8 +83,8 @@ function dadosDashboard() {
     .then((res) => res.json())
     .then((dados) => {
       const ultimosDados = dados.reverse();
-      const labels = ultimosDados.map((item) => item.dia);
-      const valores = ultimosDados.map((item) => item.total);
+      const labelsI = ultimosDados.map((item) => item.dia);
+      const valoresI = ultimosDados.map((item) => parseInt(item.total));
 
       const ctx = document.getElementById("graficoAnotacoes").getContext("2d");
 
@@ -96,11 +95,11 @@ function dadosDashboard() {
       window.graficoAnotacoes = new Chart(ctx, {
         type: "bar",
         data: {
-          labels: labels,
+          labels: labelsI,
           datasets: [
             {
               label: "Anotações por Dia",
-              data: valores,
+              data: valoresI,
               backgroundColor: "#fff",
               borderWidth: 1,
             },

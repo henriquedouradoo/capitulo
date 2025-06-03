@@ -78,10 +78,23 @@ function frequenciaInteracao(req, res) {
     });
 }
 
+
+function listarAnotacoes(req, res) {
+  const idUsuario = req.params.idUsuario;
+
+  interacaoModel.listarAnotacoes(idUsuario)
+    .then((resultado) => res.json(resultado))
+    .catch((erro) => {
+      console.error("Erro ao buscar interações:", erro);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
   interacaoVersiculo,
   totalAnotacao,
   anotacoesPorDia,
   contagemInteracoesPorTipo,
-  frequenciaInteracao
+  frequenciaInteracao,
+  listarAnotacoes
 };
