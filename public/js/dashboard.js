@@ -238,3 +238,19 @@ function dadosDashboard() {
       console.error("Erro ao carregar total de anotações:", erro);
     });
 }
+
+
+function dashboard2() {
+  var selecionado = dashboardSelecionar.value;
+  if(selecionado == 'dashboard2') {
+    window.location = '../dashboard/dashboardDois.html';
+  }
+  
+}
+
+function dashboard1() {
+  var selecionado = dashboardSelecionar.value;
+  if(selecionado == 'dashboard1') {
+    window.location = '../dashboard/dashboard.html';
+  }
+}
