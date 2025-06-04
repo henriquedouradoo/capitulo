@@ -125,13 +125,37 @@
       margin-left: 8rem;
   }
 
-  .infos {
-    color: black;
-    margin-left: 8rem;
-    margin-top: 3rem;
-    
-  }
+.profile-info {
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 40%;
+    height: 50vh;
+    margin: 40px auto;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    font-family: var(--font-title);
+}
 
-  .infos p {
-    font-size: 1.5vw;
-  }
+.profile-info h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+    color: var(--dark-100);
+    text-align: center;
+}
+
+.profile-linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 2px solid var(--green-100);
+}
+
+.profile-label {
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+.profile-dado {
+    color: #333;
+    text-align: right;
+}

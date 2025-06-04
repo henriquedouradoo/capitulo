@@ -59,27 +59,89 @@
     <div class="home">
         <h1>Seu Perfil</h1>
 
-        <div class="infos">
-            <p>E-mail: <span id="b_email">E-mail</span></p>
-            <p>Nome: <span id="b_nome">Nome</span></p>
-            <p>Sobrenome: <span id="b_sobrenome">Sobrenome</span></p>
-            <p>Senha: <span id="b_senha">Senha</span></p>
+        <div class="container">
+            <div class="profile-info">
+                <h2>Informações do Usuário</h2>
+                <div class="profile-linha">
+                    <span class="profile-label">#ID</span>
+                    <span class="profile-value" id="b_identificador">1</span>
+                </div>
+                <div class="profile-linha">
+                    <span class="profile-label">Nome:</span>
+                    <span class="profile-value" id="b_nome">Nome</span>
+                </div>
+                <div class="profile-linha">
+                    <span class="profile-label">Sobrenome:</span>
+                    <span class="profile-value" id="b_sobrenome">Sobrenome</span>
+                </div>
+                <div class="profile-linha">
+                    <span class="profile-label">E-mail:</span>
+                    <span class="profile-dado" id="b_email">E-mail</span>
+                </div>
+                <div class="profile-linha">
+                    <span class="profile-label">Perfil Leitor:</span>
+                    <span class="profile-dado" id="b_perfil">Perfil de Leitor</span>
+                </div>
+                <div class="profile-linha">
+                    <span class="profile-label">Dias Cadastrado na Plataforma:</span>
+                    <span class="profile-dado" id="b_cadastro"> Data Cadastro</span>
+                </div>
+                <div class="profile-linha">
+                    <span class="profile-label">Senha:</span>
+                    <span class="profile-dado" id="b_senha">Senha</span>
+                </div>
+            </div>
+
         </div>
     </div>
 
 </body>
+
 </html>
 
 <script>
 
-var email = sessionStorage.EMAIL_USUARIO;
-var nome = sessionStorage.NOME_USUARIO;
-var sobrenome = sessionStorage.SOBRENOME_USUARIO;
-var senha = sessionStorage.SENHA_USUARIO;
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
+    var sobrenome = sessionStorage.SOBRENOME_USUARIO;
+    var senha = sessionStorage.SENHA_USUARIO;
 
-b_email.innerHTML = `${email}`
-b_nome.innerHTML = `${nome}`
-b_sobrenome.innerHTML = `${sobrenome}`
-b_senha.innerHTML = `${senha}`
+    b_email.innerHTML = `${email}`
+    b_nome.innerHTML = `${nome}`
+    b_sobrenome.innerHTML = `${sobrenome}`
+    b_senha.innerHTML = `${senha}`
+
+    fetch(`/dashboard/perfilLeitor?idUsuario=${idUsuario}`, { cache: "no-store" })
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error("Erro ao buscar dados");
+        })
+
+        .then((dados) => {
+            console.log("Última pontuação:", dados);
+
+            const dataCadastro = new Date(dados.dtCadastro);
+            const hoje = new Date();
+
+            const calculoDias = hoje - dataCadastro;
+
+            const diasCadastrado = Math.floor(calculoDias / (1000 * 60 * 60 * 24));
+
+            b_perfil.innerHTML = `${dados.perfil}`;
+            b_identificador.innerHTML = `${dados.idUsuario}`;
+            b_cadastro.innerHTML = `${diasCadastrado} - Dias`;
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
+    function logout() {
+        sessionStorage.clear();
+        localStorage.clear();
+        window.location = "../index.html";
+    }
 
 </script>

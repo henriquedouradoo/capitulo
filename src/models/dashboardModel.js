@@ -17,7 +17,7 @@ function ultimaPontuacao(idUsuario) {
 
 function perfilLeitor(idUsuario) {
   var instrucaoSql = `
-    SELECT u.dtCadastro, qh.perfil, qh.dtResposta FROM quizHabito qh JOIN usuario u ON u.idUsuario = qh.fkUsuario 
+    SELECT u.idUsuario, u.dtCadastro, qh.perfil, qh.dtResposta FROM quizHabito qh JOIN usuario u ON u.idUsuario = qh.fkUsuario 
     WHERE qh.fkUsuario = ${idUsuario} ORDER BY qh.dtResposta DESC LIMIT 1;
   `;
 
@@ -25,7 +25,14 @@ function perfilLeitor(idUsuario) {
   return database.executar(instrucaoSql);
 }
 
+// function dadoPerfil(idUsuario) {
+//   var instrucaoSql = `
+//     SELECT u.dtCadastro, qh.perfil, qh.dtResposta FROM quizHabito qh JOIN usuario u ON u.idUsuario = qh.fkUsuario 
+//     WHERE qh.fkUsuario = ${idUsuario} ORDER BY qh.dtResposta DESC LIMIT 1;
+//   `;
+// }
+
 module.exports = {
   ultimaPontuacao,
-  perfilLeitor,
+  perfilLeitor
 };

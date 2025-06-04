@@ -15,6 +15,9 @@ router.get("/historicoPerfil", function (req, res) {
     dashboardController.historicoPerfil(req, res);
 });
 
+router.get("/dadosPerfil", function(req, res) {
+    dashboardController.dadoPerfil(req, res);
+});
 
 // router.post("/perguntar", function (req, res) {
 //     iaController.gerarResposta(req, res);

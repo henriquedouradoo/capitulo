@@ -20,7 +20,7 @@ fetch(`/dashboard/perfilLeitor?idUsuario=${idUsuario}`, { cache: 'no-store' })
       console.error(error);
     });
 
-let contador = localStorage.getItem("contadorQuiz") || 1;
+let contador = localStorage.getItem("contadorQuiz") || 0;
 
 const b_qtd = document.getElementById("b_qtd");
 b_qtd.innerHTML = `${contador}`;

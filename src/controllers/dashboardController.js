@@ -6,8 +6,7 @@ function ultimaPontuacao(req, res) {
     if (!idUsuario) {
         return res.status(400).json({ erro: "idUsuario não foi enviado" });
     }
-
-    // converte para inteiro e valida
+    
     idUsuario = parseInt(idUsuario);
     if (isNaN(idUsuario)) {
         return res.status(400).json({ erro: "idUsuario inválido" });
