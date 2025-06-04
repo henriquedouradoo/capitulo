@@ -121,7 +121,7 @@ function dadosDashboard() {
             },
             title: {
               display: true,
-              text: "Anotações por Dia (Últimos Três Dias)",
+              text: "Anotações nos Últimos Três Dias",
               color: "#000",
             },
           },
