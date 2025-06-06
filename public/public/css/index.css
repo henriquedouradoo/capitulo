@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --font-title: "Plus Jakarta Sans", sans-serif;
+    --font-button: "Manrope", sans-serif;
+    --green-100: #99EA48;
+    --dark-100: #1F1F1F;
+    --dark-text: #333333;
+    --gray: #666666;
+}
+
+::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 3px;
+    height: 1px;
+    background-color: var(--green-100);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: var(--dark-100);
+    width: 2px;
+    height: 1px;
+    border-radius: 8px;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    margin-left: -2rem;
+    position: fixed;
+    background: white;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.logo a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+    color: var(--green-100);
+}
+
+.btn-navbar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-navbar .login {
+    background-color: transparent;
+    padding: 0.7rem;
+    border-radius: 21px;
+    border: 1px solid black;
+
+    font-family: var(--font-button);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.btn-navbar .login:hover {
+    background-color: var(--green-100);
+    color: black;
+}
+
+.btn-navbar .notificacao {
+    padding: 0.5rem;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 3rem;
+
+    transition: all 0.4s ease;
+}
+
+.notificacao:hover {
+    background-color: var(--green-100);
+    border: 1px solid var(--green-100);
+}
+
+
+.home {
+    display: flex;
+    width: 100%;
+
+    margin-top: 5rem;
+}
+
+.title {
+    padding: 3rem;
+    font-family: var(--font-title);
+    width: 50%;
+    position: relative;
+    left: 6%;
+}
+
+.title h1 {
+    font-size: 4.5rem;
+    width: 100%;
+}
+
+.title span {
+    font-style: oblique;
+    text-decoration: underline var(--green-100);
+}
+
+.title p {
+    color: gray;
+    width: 100%;
+    font-size: 1.2rem;
+
+    margin-top: 0.9rem;
+}
+
+.title button {
+    background-color: var(--dark-100);
+    border: 1px solid var(--dark-100);
+    font-weight: bold;
+    font-family: var(--font-button);
+    color: white;
+    border-radius: 18px;
+
+    padding: 0.7rem;
+    margin-top: 2rem;
+
+    width: 60%;
+
+    transition: all 0.4s ease;
+}
+
+.title button:hover {
+    background-color: var(--green-100);
+    border: 1px solid var(--green-100);
+
+    color: var(--dark-100);
+}
+
+.img-home {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.img-home img {
+    width: 25rem;
+    /* border: 12px solid rgba(0, 0, 0, 0.479); */
+    margin-top: 2.6rem;
+}
+
+.sobre {
+    
+    gap: 4rem;
+    padding: 3rem;
+    font-family: var(--font-title);
+
+    background-color: var(--dark-100);
+
+}
+
+.sobre h2 {
+    font-size: 4vw;
+    color: white;
+    margin-top: 5rem;
+}
+
+.title-sobre {
+    margin-top: 3rem;
+    width: 60%;
+}
+
+.title-sobre span {
+    color: var(--green-100);
+}
+
+.conteudo-sobre {
+    display: flex;
+    font-family: var(--font-title);
+    /* justify-content: space-around; */
+    gap: 3rem;
+    width: 100%;
+}
+
+.conteudo-sobre h3 {
+    font-size: 4vw;
+    color: white;
+}
+
+.conteudo-sobre p {
+    margin-top: 3rem;
+    color: white;
+    width: 90%;
+    font-size: 18px;
+    
+}
+
+.conteudo-sobre h4 {
+    color: var(--green-100);
+    margin-top: 4rem;
+    font-size: 3vw;
+    
+}
+
+.conteudo-sobre span {
+    color: white;
+}
+
+/* .conteudo-sobre img {
+    width: 30rem;
+} */
+
+.img-sobre img {
+    /* border: 1px solid var(--green-100); */
+    width: 40rem;
+    margin-top: 4rem;
+}
+
+.versiculos {
+    background-color: white;
+
+    margin-top: 6rem;
+
+}
+
+.versiculos h2 {
+    font-family: var(--font-title);
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3vw;
+    color: var(--dark-100);
+    
+}
+
+.versiculoTexto {
+    text-align: center;
+    font-family: var(--dark-text);
+    width: 100%;
+    margin-top: 3rem;
+    
+}
+
+.versiculoTexto h3 {
+    font-family: var(--font-title);
+    font-size: 2.4vw;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.versiculoTexto h4 {
+    margin-top: 4rem;
+    font-family: var(--font-title);
+    color: var(--green-100);
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--dark-100);
+    padding: 2rem 0;
+
+}
+
+.contato {
+    width: 100%;
+    text-align: center;
+}
+
+.conteudo-contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    width: 80%;
+    margin: 0 auto;
+    
+    border: 2px solid var(--dark-100);
+    background-color: var(--green-100);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+}
+
+.conteudo-contato:hover {
+    background-color: white;
+
+}
+
+.conteudo-contato h2 {
+    color: #000;
+    font-size: 3rem;
+    font-family: var(--font-title);
+}
+
+.conteudo-contato button {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-button);
+    transition: all 0.4s ease;
+}
+
+.conteudo-contato:hover button {
+    background-color: var(--green-100);
+    
+}
+
+.conteudo-contato button:hover {
+    background-color: #6ea833;
+    
+}
+
+.links {
+    margin-top: 3rem;
+}
+
+.links svg {
+    margin-left: 7rem;
+    padding: 1rem;
+}
+
+.title-link {
+   padding: 1rem;
+   margin-left: 7rem;
+    color: white;
+    font-family: var(--font-title);
+    width: 40%;
+    display: flex;
+}
+
+.link-midia {
+    display: flex;
+}
+
+.insta {
+    position: relative;
+    right: 6rem;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    margin-right: 10%;
+    color: white;
+    font-family: var(--font-title);
+
+    position: relative;
+    top: -9rem;
+}
+
+.info-footer h3 {
+    font-weight: bold;
+    color: var(--green-100);
+}
+
+.info-footer p a {
+    color: white;
+    text-decoration: none;
+}
+
+.info-footer li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.info-footer li a:hover {
+    color: var(--green-100);
+}

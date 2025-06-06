@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --font-title: "Plus Jakarta Sans", sans-serif;
+    --font-button: "Manrope", sans-serif;
+    --green-100: #99EA48;
+    --dark-100: #1F1F1F;
+    --dark-text: #333333;
+    --gray: #666666;
+}
+
+::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 3px;
+    height: 1px;
+    background-color: var(--green-100);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: var(--dark-100);
+    width: 2px;
+    height: 1px;
+    border-radius: 8px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+
+    position: fixed;
+    background: white;
+     width: 100%;
+
+    z-index: 1000;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+
+    transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+    color: var(--green-100);
+}
+
+.btn-navbar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-navbar .login {
+    background-color: transparent;
+    padding: 0.7rem;
+    border-radius: 21px;
+    border: 1px solid black;
+
+    font-family: var(--font-button);
+    font-weight: bold;
+
+    transition: all 0.4s ease;
+}
+
+.btn-navbar .login:hover {
+    background-color: var(--green-100);
+    color: black;
+}
+
+.btn-navbar .notificacao {
+    padding: 0.5rem;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 3rem;
+
+    transition: all 0.4s ease;
+}
+
+.notificacao:hover {
+    background-color: var(--green-100);
+    border: 1px solid var(--green-100);
+}
+
+.home {
+  margin-top: 1rem;
+  font-family: var(--font-title);
+  margin-left: 10rem;
+  font-size: 0.8vw;
+}
+
+#b_usuario {
+    color: var(--dark-100);
+}
+
+.kpis {
+    display: flex;
+    width: 100%;
+    gap: 4.2rem;
+
+    margin-left: 10rem;
+
+}
+
+.kpi1 {
+    background-color: var(--green-100);
+    border-radius: 8px;
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+
+    transition: all 0.4s ease;
+}
+
+.kpi2 {
+    background-color: var(--green-100);
+    border-radius: 8px;
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.kpi3 {
+    background-color: var(--green-100);
+    border-radius: 8px;
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.kpi4 {
+    background-color: var(--green-100);
+    border-radius: 8px;
+    width: 250px;
+    height: 150px;
+
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-title);
+    justify-content: center;
+    display: flex;
+}
+
+.graficos {
+    display: flex;
+    width: 100%;
+
+    margin-left: 10rem;
+    gap: 3rem;
+}
+
+.grafico1 {
+    width: 30%;
+    border: 1px solid var(--green-100);
+    border-radius: 12px;
+    height: 65vh;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--green-100);
+    transition: all 0.3s ease;
+}
+
+.grafico1:hover {
+    margin-top: 0.8rem;
+}
+
+.grafico2 {
+    width: 41.5%;
+    border: 1px solid var(--green-100);
+    border-radius: 12px;
+    height: 65vh;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--green-100);
+    transition: all 0.3s ease;
+}
+
+.grafico2:hover {
+    margin-top: 0.8rem;
+}
+
+.graficoEnd {
+    width: 100%;
+
+    margin-left: 10rem;
+    gap: 3rem;
+}
+
+.graficoInteracao {
+    width: 77%;
+    height: 30vh;
+    background-color: var(--green-100);
+
+    border: 1px solid var(--green-100);
+    color: white;
+    border-radius: 12px;
+    height: 65vh;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+#graficoInteracoes {
+    text-align: center;
+    align-items: center;
+    margin-left: 7rem;
+    color: white;
+}
+
+#graficoAnotacoes {
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+#b_conta {
+    color: white;
+    background-color: var(--dark-100);
+}
+
+#b_dias {
+    color: white;
+    background-color: var(--dark-100);
+}
+
+#anotacao_total {
+    color: white;
+    background-color: var(--dark-100);
+}
+
+#interacaoFrequente {
+    color: white;
+    background-color: var(--dark-100);
+}

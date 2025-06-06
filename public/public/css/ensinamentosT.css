@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --font-title: "Plus Jakarta Sans", sans-serif;
+  --font-button: "Manrope", sans-serif;
+  --green-100: #99ea48;
+  --dark-100: #1f1f1f;
+  --dark-text: #333333;
+  --gray: #666666;
+}
+
+::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 3px;
+  height: 1px;
+  background-color: var(--green-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-100);
+  width: 2px;
+  height: 1px;
+  border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-items: flex-start;
+  text-align: center;
+  position: fixed;
+  background: var(--dark-100);
+
+  width: 10%;
+  height: 100vh;
+  gap: 8rem;
+
+  z-index: 1000;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 3rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  font-family: var(--font-title);
+  font-weight: bold;
+
+  transition: all 0.4s ease;
+}
+
+.navbar a {
+  color: rgb(253, 253, 253);
+  text-decoration: none;
+
+  transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+  color: var(--green-100);
+}
+
+.btn-navbar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.btn-navbar .login {
+  background-color: var(--green-100);
+  padding: 0.7rem;
+  border-radius: 13px;
+  width: 7rem;
+  border: 1px solid black;
+
+  font-family: var(--font-button);
+  font-weight: bold;
+  text-align: center;
+
+  transition: all 0.4s ease;
+}
+
+.btn-navbar .login:hover {
+  background-color: white;
+  color: black;
+}
+
+.home {
+  /* margin-bottom: 0.5rem; */
+  font-family: var(--font-title);
+  margin-left: 8rem;
+  font-size: 0.8vw;
+  margin-top: 2.6rem;
+
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.home h1 {
+  margin-left: 8rem;
+}
+
+.container {
+  width: 100%;
+
+  margin-top: 0.5rem;
+
+  border-radius: 8px;
+  overflow-y: hidden;
+}
+
+.versiculo {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  margin-left: 8rem;
+  margin-top: 3rem;
+
+  background-color: var(--dark-100);
+  border-radius: 8px;
+
+  padding: 1rem;
+}
+
+.versiculo h3 {
+  color: white;
+  font-family: var(--font-title);
+  font-size: 1.5vw;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.versiculo h4 {
+  font-size: 1rem;
+  color: var(--green-100);
+}
+
+/* .contentIA {
+    text-align: center;
+    margin-top: 2rem;
+    
+    background-color: var(--green-100);
+    width: 80%;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: 8rem;
+}
+
+.contentIA h3 {
+    font-size: 1.3rem;
+    color: var(--dark-100);
+} */
+
+.interacao {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.btnsInteracao {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnsInteracao label {
+  font-family: var(--font-button);
+  color: black;
+  font-size: 1rem;
+}
+
+.btnsInteracao input[type="radio"] {
+    accent-color: var(--dark-100);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #7ED957;
+  border-radius: 4px;       
+  background-color: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.anotacoes {
+  background-color: var(--green-100);
+  border-radius: 8px;
+  margin-left: 8rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 80%;
+}
+
+.mensagem {
+  font-size: 1.3rem;
+}
+
+.mensagem textarea {
+  margin-top: 1rem;
+  border: none;
+
+  resize: none;
+  width: 100%;
+  height: 15vh;
+  border-radius: 2px;
+}
+
+.enviar {
+  margin-top: 1rem;
+}
+
+.enviar button {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--dark-100);
+  font-family: var(--font-title);
+  padding: 0.7rem;
+  color: white;
+  width: 100%;
+
+  transition: all 0.4s ease;
+}
+
+.enviar button:hover {
+  background-color: #585858;
+  color: white;
+}
+
+.listar {
+  width: 100%;
+  border: none;
+  background-color: white;
+  font-family: var(--font-title);
+  padding: 0.7rem;
+  color: var(--dark-100);
+  border-radius: 12px;
+  margin-top: 1rem;
+  transition: all 0.4s ease;
+}
+
+.listar:hover {
+  background-color: rgb(237, 237, 237);
+  color: var(--dark-100);
+}
