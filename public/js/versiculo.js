@@ -1,12 +1,27 @@
+function exibirVersiculo(data) {
+    var infoVersiculo = document.getElementById('versiculoTexto');
+    var indiceAleatorio = Math.floor(Math.random() * data.length);
+
+    for (let i = 0; i < data.length; i++) {
+        if (i == indiceAleatorio) {
+            infoVersiculo.innerHTML = `
+                <h3>${data[i].versiculo}</h3>
+                <h4>${data[i].localizacao}</h4>
+            `;
+            break;
+        }
+    }
+}
+
 fetch('../data/versiculos.json')
 .then(response => response.json())
 .then(data => {
-    var infoVersiculo = document.getElementById('versiculoTexto');
-    var indiceAleatorio = Math.floor(Math.random() * data.length)
-    infoVersiculo.innerHTML = `
-        <h3>${data[indiceAleatorio].versiculo}</h3>
-        <h4>${data[indiceAleatorio].localizacao}</h4>
-    `;
+    // Exibe um versículo imediatamente
+    exibirVersiculo(data);
+
+    setInterval(() => {
+        exibirVersiculo(data);
+    }, 10000);
 })
 .catch(error => {
     console.error('Erro ao carregar o JSON:', error);
