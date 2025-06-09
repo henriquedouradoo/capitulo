@@ -46,6 +46,7 @@
                     sessionStorage.SENHA_USUARIO = json.senha;
 
                     setTimeout(function () {
+                        alert('Bem-Vindo!')
                         window.location = "./dashboard/quiz.html";
                     }, 1000); // apenas para exibir o loading
 

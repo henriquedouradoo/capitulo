@@ -188,7 +188,7 @@
     gap: 4rem;
     padding: 3rem;
     font-family: var(--font-title);
-
+    width: 100%;
     background-color: var(--dark-100);
 
 }
@@ -197,11 +197,14 @@
     font-size: 4vw;
     color: white;
     margin-top: 5rem;
+    margin-left: 2rem;
+    width: 100%;
 }
 
 .title-sobre {
     margin-top: 3rem;
     width: 60%;
+    margin-left: 3rem;
 }
 
 .title-sobre span {
@@ -224,7 +227,7 @@
 .conteudo-sobre p {
     margin-top: 3rem;
     color: white;
-    width: 90%;
+    width: 80%;
     font-size: 18px;
     
 }
@@ -232,7 +235,7 @@
 .conteudo-sobre h4 {
     color: var(--green-100);
     margin-top: 4rem;
-    font-size: 3vw;
+    font-size: 2.9vw;
     
 }
 
@@ -248,6 +251,7 @@
     /* border: 1px solid var(--green-100); */
     width: 40rem;
     margin-top: 4rem;
+    margin-left: 5rem;
 }
 
 .versiculos {
