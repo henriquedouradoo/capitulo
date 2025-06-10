@@ -79,13 +79,20 @@ function dadosDashboard() {
       console.error(error);
     });
 
+    var labelsI = []
+    var valoresI = []
+
   fetch(`/interacao/anotacoesdia/${idUsuario}`)
     .then((res) => res.json())
     .then((dados) => {
       const ultimosDados = dados.reverse();
-      const labelsI = ultimosDados.map((item) => item.dia);
-      const valoresI = ultimosDados.map((item) => parseInt(item.total));
 
+      for (var i = 0; i < ultimosDados.length; i++) {
+        labelsI.push(ultimosDados[i].dia);
+        valoresI.push(parseInt(ultimosDados[i].total));
+      }
+      // const labelsI = ultimosDados.map((item) => item.dia);
+      // const valoresI = ultimosDados.map((item) => parseInt(item.total));
       const ctx = document.getElementById("graficoAnotacoes").getContext("2d");
 
       if (window.graficoAnotacoes instanceof Chart) {
@@ -135,8 +142,17 @@ function dadosDashboard() {
   fetch(`/interacao/interacoestotal/${idUsuario}`)
     .then((res) => res.json())
     .then((dados) => {
-      const labels = dados.map((item) => item.tipo.toUpperCase());
-      const valores = dados.map((item) => item.total);
+
+      var labels = [];
+      var valores = [];
+
+      for (var i = 0; i < dados.length; i++) {
+          labels.push(dados[i].tipo);
+          valores.push(dados[i].total);
+      }
+
+      // const labels = dados.map((item) => item.tipo.toUpperCase());
+      // const valores = dados.map((item) => item.total);
 
       const ctx = document.getElementById("graficoInteracoes").getContext("2d");
 
