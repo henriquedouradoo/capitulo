@@ -46,7 +46,9 @@ fetch(`/dashboard/ultimaPontuacao?idUsuario=${idUsuario}`, { cache: 'no-store' }
 
 
 function quizEnsinamentos() {
-
+  contador++;
+  localStorage.setItem("contadorQuiz", contador);
+  b_qtd.innerHTML = `${contador}`;
   alert("Direcionando para seu Quiz!");
   setTimeout(() => {
     window.location = "/quiz/quizEnsinamentos.html";
